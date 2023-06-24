@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resume PUBLIC "-//ARKADIANRIVER//DTD DITA Resume//EN" "resume.dtd">
+<resume id="resume-gary-faircloth">
+    <name>Gary Faircloth</name>
+    <header>
+        <description>Technical Content Authoring, Architecture, DevOps, and Software Development</description>
+        <contact>
+            <phone><countrycode>1</countrycode><number>4086466157</number></phone>
+            <email>arkadianriver@gmail.com</email>
+            <linkedin>garyfaircloth</linkedin>
+            <website>arkadianriver.com</website>
+        </contact>
+    </header>
+    <resumebody>
+        <summary>
+            <p>Coordinating with users, engineers, designers, writers, and translators, I have
+                carried many UIs and publications from design to release. Throughout the development
+                process, many look to me for coaching, leadership, and training on new technologies.
+                I inspire a fun and energetic atmosphere in which to create.</p>
+            <specialties>
+                <specialty>Software development for documentation production and quality assurance</specialty>
+                <specialty>Support and DevOps for documentation authoring and production tools</specialty>
+                <specialty>Technical writing of user and development documentation</specialty>
+                <specialty>UI design methodologies</specialty>
+                <specialty>Internal professional vitality training</specialty>
+                <specialty>Translation coordination</specialty>
+            </specialties>
+            <technologies>
+                <technology>
+                    <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
+                    <techcategorylist>Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
+                        TravisCI, GitHub workflows, Docker</techcategorylist>
+                </technology>
+                <technology>
+                    <techcategory>Technical writing and training</techcategory>
+                    <techcategorylist>DITA-OT, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
+                        XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</techcategorylist>
+                </technology>
+                <technology>
+                    <techcategory>Software development</techcategory>
+                    <techcategorylist>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
+                        Perl, Git, bash shell</techcategorylist>
+                </technology>
+            </technologies>
+        </summary>
+    </resumebody>
+</resume>

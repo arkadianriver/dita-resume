@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+    <public publicId="-//ARKADIANRIVER//ENTITIES DITA Resume//EN"
+        uri="dtd/resume.ent"/>
+    <public publicId="-//ARKADIANRIVER//ELEMENTS DITA Resume//EN"
+        uri="dtd/resume.mod"/>
+    <public publicId="-//ARKADIANRIVER//DTD DITA Resume//EN"
+        uri="dtd/resume.dtd"/>
+</catalog>

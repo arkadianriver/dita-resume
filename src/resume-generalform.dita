@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="Untitled" xml:lang="en-US">
+    <title>Gary Faircloth</title>
+    <abstract>
+        <shortdesc>Technical Content Authoring, Architecture, DevOps, and Software
+            Development</shortdesc>
+        <ul id="contact">
+            <li>+1.408.646.6157</li>
+            <li>arkadianriver@gmail.com</li>
+            <li>linkedin.com/in/garyfaircloth</li>
+            <li>arkadianriver.com/works/</li>
+        </ul>
+    </abstract>
+    <body>
+        <section id="summary">
+            <title>Summary</title>
+            <p>Coordinating with users, engineers, designers, writers, and translators, I have
+                carried many UIs and publications from design to release. Throughout the development
+                process, many look to me for coaching, leadership, and training on new technologies.
+                I inspire a fun and energetic atmosphere in which to create.</p>
+            <ul spectitle="Specialties" id="specialties">
+                <li>Software development for documentation production and quality assurance</li>
+                <li>Support and DevOps for documentation authoring and production tools</li>
+                <li>Technical writing of user and development documentation</li>
+                <li>UI design methodologies</li>
+                <li>Internal professional vitality training</li>
+                <li>Translation coordination</li>
+            </ul>
+            <dl spectitle="Technologies" id="technologies">
+                <dlentry>
+                    <dt>Content DevOps (Docs-as-Code CI/CD)</dt>
+                    <dd>Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
+                        TravisCI, GitHub workflows, Docker</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Technical writing and training</dt>
+                    <dd>DITA-OT, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
+                        XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Software development</dt>
+                    <dd>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
+                        Perl, Git, bash shell</dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

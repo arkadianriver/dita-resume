@@ -1,0 +1,14 @@
+
+Todos:
+	create specialization:
+		✔ copy resume data to generalized DITA format @done(2023-06-23 10:12)
+		✔ transfer to specialized resume tags @done(2023-06-23 13:02)
+		✔ create specialized DTD @done(2023-06-24 01:13)
+		✔ validate in Oxygen and test domains generalized build @done(2023-06-24 02:15)
+	finish remaining specialization:
+	  ☐ cut'n'paste exp, edu, and awards data to new tags
+		☐ add tags to resume DTD
+		☐ test with generalized pdf2 build
+	create transform:
+		☐ create fo necessary to print with Apache FOP
+		☐ create templates for specialized sections
