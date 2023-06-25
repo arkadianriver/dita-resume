@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="role-based-resumes">
+	<title>Role-based resumes</title>
+	<topicref href="resume.dita">
+		<ditavalref href="filters-dev.ditaval">
+			<ditavalmeta>
+				<dvrResourceSuffix>_dev</dvrResourceSuffix>
+			</ditavalmeta>
+		</ditavalref>
+		<ditavalref href="filters-ia.ditaval">
+			<ditavalmeta>
+				<dvrResourceSuffix>_ia</dvrResourceSuffix>
+			</ditavalmeta>
+		</ditavalref>
+		<ditavalref href="filters-tw.ditaval">
+			<ditavalmeta>
+				<dvrResourceSuffix>_tw</dvrResourceSuffix>
+			</ditavalmeta>
+		</ditavalref>
+	</topicref>
+</map>

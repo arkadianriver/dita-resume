@@ -3,12 +3,16 @@
 <resume id="resume-gary-faircloth">
     <name>Gary Faircloth</name>
     <header>
-        <description>Technical Content Authoring, Architecture, DevOps, and Software Development</description>
+        <description>
+            <ph audience="dev">Technical Content Software Development, DevOps, Authoring, and Architecture</ph>
+            <ph audience="ia">Technical Content Architecture, Authoring, DevOps, and Software Development</ph>
+            <ph audience="tw">Technical Content Authoring, Architecture, DevOps, and Software Development</ph>
+        </description>
         <contact>
             <phone><countrycode>1</countrycode><number>4086466157</number></phone>
             <email>arkadianriver@gmail.com</email>
             <linkedin>garyfaircloth</linkedin>
-            <website>arkadianriver.com</website>
+            <website>arkadianriver.com/works</website>
         </contact>
     </header>
     <resumebody>

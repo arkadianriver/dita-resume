@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin id="com.arkadianriver.resume">
+  
   <feature extension="package.support.name" value="Gary Faircloth"/>
   <feature extension="package.support.email" value="arkadianriver@gmail.com"/>
   <feature extension="package.version" value="0.1"/>
-  <!--
-  <transtype name="resume" desc="Prints resume as PDF"/>
+  
+  <!-- Extension to specialize the DITA source with resume-specific tags -->
+  <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
+
+  <!-- Extension to change the output for nice looking PDF resumes -->
+  <require plugin="org.dita.pdf2"/>
+  <transtype name="resume" extends="pdf2" desc="Prints resume as PDF"/>
   <feature extension="dita.transtype.print" value="resume"/>
   <feature extension="ant.import" file="build.xml"/>
-  -->
-  <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
+  
 </plugin>

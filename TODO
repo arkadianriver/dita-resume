@@ -6,9 +6,18 @@ Todos:
 		✔ create specialized DTD @done(2023-06-24 01:13)
 		✔ validate in Oxygen and test domains generalized build @done(2023-06-24 02:15)
 	finish remaining specialization:
-	  ☐ cut'n'paste exp, edu, and awards data to new tags
-		☐ add tags to resume DTD
-		☐ test with generalized pdf2 build
+	  ☐ cut'n'paste exp and add tags to DTD and test
+		☐ cut'n'paste edu and add tags to DTD and test
+		☐ cut'n'paste awards and add tags to DTD and test
 	create transform:
-		☐ create fo necessary to print with Apache FOP
-		☐ create templates for specialized sections
+		✔ set up plugin for custom xsl @done(2023-06-24 12:09)
+		✔ test map with ditavalref @done(2023-06-24 14:52)
+		✔ start top-level topics on separate pages @done(2023-06-24 16:22)
+		☐ @today create templates for summary section
+		☐ remove pagenum header and add to footer with total pages
+		☐ create templates for experience section
+		☐ create templates for edu section
+		☐ create templates for awards section
+		☐ how to capture and use current audience prop for experience section ordering
+	fix for multipage resumes:
+		✔ restart page numbering for each top-level topic @done(2023-06-24 18:09)

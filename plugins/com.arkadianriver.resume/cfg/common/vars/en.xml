@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables>
+
+  <!-- goes where Body odd footer would go -->
+  <variable id="Page N of M">Page <param ref-name="pagenum"/> of <param ref-name="pagettl"/></variable>
+
+</variables>
