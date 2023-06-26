@@ -59,6 +59,16 @@ EOA
 	ant -f "${scriptdir}/temp/buildfo.xml"
 }
 
+pagesinstall ()
+{
+	[ -z $GITHUB_WORKSPACE ] && echo 'To be run only by GitHub Actions.' && exit 1
+	
+  curl -L https://github.com/dita-ot/dita-ot/releases/download/$OT_VRM/dita-ot-${OT_VRM}.zip -O
+  unzip -q dita-ot-${OT_VRM}.zip -d $GITHUB_WORKSPACE/Apps
+  sed -i 's|\(plugindirs.*\)|\1;'"$GITHUB_WORKSPACE"'\/plugins|' \
+    $GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/config/configuration.properties
+}
+
 splitpdf ()
 {
 	# credit https://stackoverflow.com/a/10086073/5360420
@@ -97,6 +107,9 @@ case $1 in
 		;;
 	-p)
 		splitpdf
+		;;
+	-pagesinstall)
+		pagesinstall
 		;;
 	-ghpages)
 		$DITA_HOME/bin/dita install

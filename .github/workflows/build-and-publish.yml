@@ -30,13 +30,12 @@ jobs:
         sudo apt install -y pdftk
     - name: Install and Setup DITA-OT ${{ env.OT_VRM }} [🠋]
       run: |
-        curl -L https://github.com/dita-ot/dita-ot/releases/download/${{ env.OT_VRM }}/dita-ot-${{ env.OT_VRM }}.zip -O
-        unzip -q dita-ot-${{ env.OT_VRM }}.zip -d ./Apps
-        sed -i 's|\(plugindirs.*\)|\1;'"${{ env.GITHUB_WORKSPACE }}"'\/plugins|' \
-          ./Apps/dita-ot-${{ env.OT_VRM }}/config/configuration.properties
+        ./run.sh -pagesinstall
     - name: Build Output 🔧
+      env:
+        DITA_HOME: ${{ env.GITHUB_WORKSPACE }}/Apps/dita-ot-${{ env.OT_VRM }}
       run: |
-        DITA_HOME=./Apps/dita-ot-${{ env.OT_VRM }} ./run.sh -ghpages
+        ./run.sh -ghpages
     - name: Split PDF ✂️
       run: |
         ./run.sh -p
