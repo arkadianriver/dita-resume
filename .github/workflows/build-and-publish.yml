@@ -22,11 +22,11 @@ jobs:
         persist-credentials: false
     - name: Install DITA-OT and Build [🠋] 🔧
       run: |
-        curl https://github.com/dita-ot/dita-ot/releases/download/${OT_VRM}/dita-ot-${OT_VRM}.zip -O
-        unzip dita-ot-${OT_VRM}.zip -d ./Apps
-        sed -i "s/^\(plugindirs.*\)$/\1;${GITHUB_WORKSPACE}\/plugins/" \
-          ./Apps/dita-ot-${OT_VRM}/config/configuration.properties
-        DITA_HOME=./Apps/dita-ot-${OT_VRM} ./run.sh -ghpages
+        curl https://github.com/dita-ot/dita-ot/releases/download/${{ env.OT_VRM }}/dita-ot-${{ env.OT_VRM }}.zip -O
+        unzip dita-ot-${{ env.OT_VRM }}.zip -d ./Apps
+        sed -i 's|\(plugindirs.*\)|\1;'"$GITHUB_WORKSPACE"'\/plugins|' \
+          ./Apps/dita-ot-${{env.OT_VRM}}/config/configuration.properties
+        DITA_HOME=./Apps/dita-ot-$OT_VRM ./run.sh -ghpages
     - name: Install pdftk and Split PDF [🠋] ✂️
         ./run.sh -p
       run: |
