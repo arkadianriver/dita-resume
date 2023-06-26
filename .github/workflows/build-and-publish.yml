@@ -32,13 +32,11 @@ jobs:
       run: |
         ./run.sh -pagesinstall
     - name: Build Output 🔧
-      env:
-        DITA_HOME: ${{ env.GITHUB_WORKSPACE }}/Apps/dita-ot-${{ env.OT_VRM }}
       run: |
         ./run.sh -ghpages
     - name: Split PDF ✂️
       run: |
-        ./run.sh -p
+        DITA_HOME=${{ env.GITHUB_WORKSPACE }}/Apps/dita-ot-${{ env.OT_VRM }} ./run.sh -p
     - name: Deploy to Pages 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
