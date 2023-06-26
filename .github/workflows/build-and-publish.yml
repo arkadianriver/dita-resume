@@ -1,0 +1,39 @@
+# This workflow installs dependencies, builds to out folder, deploys to pages
+
+name: build-and-publish
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  OT_VRM=4.1
+
+jobs:
+  build-and-publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+    - name: Install DITA-OT and Build [🠋] 🔧
+      run: |
+        curl https://github.com/dita-ot/dita-ot/releases/download/${OT_VRM}/dita-ot-${OT_VRM}.zip -O
+        unzip dita-ot-${OT_VRM}.zip -d ./Apps
+        sed -i "s/^\(plugindirs.*\)$/\1;${GITHUB_WORKSPACE}\/plugins/" \
+          ./Apps/dita-ot-${OT_VRM}/config/configuration.properties
+        DITA_HOME=./Apps/dita-ot-${OT_VRM} ./run.sh -ghpages
+    - name: Install pdftk and Split PDF [🠋] ✂️
+        ./run.sh -p
+      run: |
+        sudo apt install -y pdftk
+    - name: Deploy to Pages 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out

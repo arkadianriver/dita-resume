@@ -1,6 +1,8 @@
-# dita-resume
+[![Build status](https://github.com/arkadianriver/dita-resume/workflows/build/badge.svg)](https://github.com/arkadianriver/dita-resume/actions)
 
-> UNDER CONSTRUCTION
+> STILL UNDER CONSTRUCTION
+
+# dita-resume
 
 ## Purpose
 

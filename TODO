@@ -28,13 +28,16 @@ Todos:
 			✔ figure out spectitle for lists, L10n compatible @done(2023-06-25 14:42)
 			✔ reformat technologies list @done(2023-06-25 15:54)
 		exp section:
-			☐ how to capture and use current audience prop for ordering
+			☐ @today capture shortdesc/ph audience for bullet ordering
 		edu section:
+			☐ expecting simple fo:blocks with header
 		awards section:
+			☐ expecting simple fo:blocks with header
 	fix for multipage resumes:
 		✔ restart page numbering for each top-level topic @done(2023-06-24 18:09)
+		✔ split PDF at top-level bookmarks @done(2023-06-25 18:22)
 	build and test:
-		☐ set up a GitHub Actions build to post final PDFs to github pages
+		✔ set up a GitHub Actions build to post final PDFs to github pages @done(2023-06-25 23:50)
 	misc:
 		☐ add and use 'Open Sans' custom font
 		☐ use total pages in footer, if available
