@@ -32,18 +32,18 @@
             <technologies>
                 <technology>
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
-                    <techcategorylist>Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
+                    <techcategorylist>DITA-OT, Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
                         TravisCI, GitHub workflows, Docker</techcategorylist>
                 </technology>
                 <technology>
                     <techcategory>Technical writing and training</techcategory>
-                    <techcategorylist>DITA-OT, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
+                    <techcategorylist>DITA, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
                         XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</techcategorylist>
                 </technology>
                 <technology>
                     <techcategory>Software development</techcategory>
                     <techcategorylist>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
-                        Perl, Git, bash shell</techcategorylist>
+                        XSL-FO, Perl, Git, bash shell</techcategorylist>
                 </technology>
             </technologies>
         </summary>

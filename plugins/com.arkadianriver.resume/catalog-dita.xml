@@ -8,6 +8,4 @@
   <public publicId="-//ARKADIANRIVER//DTD DITA Resume//EN"
     uri="dtd/resume.dtd" />
 
-  <nextCatalog catalog="cfg/catalog.xml" />
-
 </catalog>
