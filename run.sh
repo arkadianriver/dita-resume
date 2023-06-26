@@ -62,7 +62,7 @@ EOA
 pagesinstall ()
 {
 	[ -z $GITHUB_WORKSPACE ] && echo 'To be run only by GitHub Actions.' && exit 1
-	
+
   curl -L https://github.com/dita-ot/dita-ot/releases/download/$OT_VRM/dita-ot-${OT_VRM}.zip -O
   unzip -q dita-ot-${OT_VRM}.zip -d $GITHUB_WORKSPACE/Apps
   sed -i 's|\(plugindirs.*\)|\1;'"$GITHUB_WORKSPACE"'\/plugins|' \
@@ -112,8 +112,8 @@ case $1 in
 		pagesinstall
 		;;
 	-ghpages)
-		$DITA_HOME/bin/dita install
-		$DITA_HOME/bin/dita -i src/toc.ditamap -f resume
+		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita install
+		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/toc.ditamap -f resume
 		;;
 	*)
 		usage

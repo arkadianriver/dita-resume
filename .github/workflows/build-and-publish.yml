@@ -36,7 +36,7 @@ jobs:
         ./run.sh -ghpages
     - name: Split PDF ✂️
       run: |
-        DITA_HOME=${{ env.GITHUB_WORKSPACE }}/Apps/dita-ot-${{ env.OT_VRM }} ./run.sh -p
+        ./run.sh -p
     - name: Deploy to Pages 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
