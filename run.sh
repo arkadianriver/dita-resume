@@ -69,6 +69,65 @@ pagesinstall ()
     $GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/config/configuration.properties
 }
 
+outnojekyll ()
+{
+	touch ./out/.nojekyll
+	cat <<EOI > "./out/index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resumes</title>
+	<style>
+		body {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		h1 {
+			font-size: 18pt;
+		}
+		div {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+		div > div {
+			background-color: #dedede;
+			width: 240px;
+			min-height: 240px;
+			padding: 12px;
+			height: auto;
+			display: flex;
+			border-radius: 12px;
+		}
+		div > div > div {
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: cornflowerblue;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<article>
+			<h1>DITA-created role-based resumes</h1>
+			<div>
+				<div><div><a href="resume_dev.pdf">Resumé ordered for Content DevOps Development</a></div></div>
+				<div><div><a href="resume_ia.pdf">Resumé ordered for Information Architecture</a></div></div>
+				<div><div><a href="resume_wrt.pdf">Resumé ordered for Technical Writing</a></div></div>
+			</div>
+		</article>
+	</main>
+</body>
+</html>
+EOI
+}
+
 splitpdf ()
 {
 	# credit https://stackoverflow.com/a/10086073/5360420
@@ -89,6 +148,8 @@ splitpdf ()
 		[ "$b" = "end" ] || b=$[b-1]
 		pdftk "$infile" cat $a-$b output out/resume_${roles[$i]}.pdf
 	done
+
+	rm $infile
 }
 
 case $1 in
@@ -114,6 +175,7 @@ case $1 in
 		;;
 	-ghpages)
 		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/toc.ditamap -f resume
+		outnojekyll
 		;;
 	*)
 		usage
