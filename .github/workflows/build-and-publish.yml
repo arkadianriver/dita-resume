@@ -1,6 +1,6 @@
 # This workflow installs dependencies, builds to out folder, deploys to pages
 
-name: build-and-publish
+name: build
 on:
   push:
     branches: [ main ]
