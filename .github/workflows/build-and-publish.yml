@@ -20,17 +20,26 @@ jobs:
       uses: actions/checkout@v3
       with:
         persist-credentials: false
-    - name: Install DITA-OT and Build [🠋] 🔧
-      run: |
-        curl -L https://github.com/dita-ot/dita-ot/releases/download/${{ env.OT_VRM }}/dita-ot-${{ env.OT_VRM }}.zip -O
-        unzip dita-ot-${{ env.OT_VRM }}.zip -d ./Apps
-        sed -i 's|\(plugindirs.*\)|\1;'"${{ env.GITHUB_WORKSPACE }}"'\/plugins|' \
-          ./Apps/dita-ot-${{ env.OT_VRM }}/config/configuration.properties
-        DITA_HOME=./Apps/dita-ot-${{ env.OT_VRM }} ./run.sh -ghpages
-    - name: Install pdftk and Split PDF [🠋] ✂️
-        ./run.sh -p
+    - name: Install Java [🠋]
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Install pdftk [🠋]
       run: |
         sudo apt install -y pdftk
+    - name: Install and Setup DITA-OT ${{ env.OT_VRM }} [🠋]
+      run: |
+        curl -L https://github.com/dita-ot/dita-ot/releases/download/${{ env.OT_VRM }}/dita-ot-${{ env.OT_VRM }}.zip -O
+        unzip -q dita-ot-${{ env.OT_VRM }}.zip -d ./Apps
+        sed -i 's|\(plugindirs.*\)|\1;'"${{ env.GITHUB_WORKSPACE }}"'\/plugins|' \
+          ./Apps/dita-ot-${{ env.OT_VRM }}/config/configuration.properties
+    - name: Build Output 🔧
+      run: |
+        DITA_HOME=./Apps/dita-ot-${{ env.OT_VRM }} ./run.sh -ghpages
+    - name: Split PDF ✂️
+      run: |
+        ./run.sh -p
     - name: Deploy to Pages 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
