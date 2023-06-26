@@ -47,5 +47,8 @@
                 </technology>
             </technologies>
         </summary>
+        <!-- @TODO: Add Experience section with bullets ordered by role -->
+        <!-- @TODO: Add Education section -->
+        <!-- @TODO: Add Awards section -->
     </resumebody>
 </resume>

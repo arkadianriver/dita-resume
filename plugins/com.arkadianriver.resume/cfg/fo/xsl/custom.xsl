@@ -7,5 +7,8 @@
 
   <xsl:include href="header.xsl" />
   <xsl:include href="summary.xsl" />
+  <xsl:include href="experience.xsl" />
+  <xsl:include href="education.xsl" />
+  <xsl:include href="awards.xsl" />
 
 </xsl:stylesheet>

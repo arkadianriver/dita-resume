@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:opentopic-func="http://www.idiominc.com/opentopic/exsl/function"
-  xmlns:dita2xslfo="http://dita-ot.sourceforge.net/ns/200910/dita2xslfo"
   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   version="2.0">
 
   <!--
@@ -11,32 +10,6 @@
   SUMMARY SECTION
   ===========================================================
   -->
-
-  <!-- 
-  Add the trailing leader to the DITA-OT section title template
-  -->
-  <xsl:template
-    match="*[contains(@class,' topic/section ')]
-            [@spectitle != '' and not(*[contains(@class, ' topic/title ')])]"
-    mode="dita2xslfo:section-heading"
-    priority="10">
-    <fo:block xsl:use-attribute-sets="section.title section.color">
-      <xsl:call-template name="commonattributes" />
-      <xsl:variable name="spectitleValue" as="xs:string" select="string(@spectitle)" />
-      <xsl:variable name="resolvedVariable">
-        <xsl:call-template name="getVariable">
-          <xsl:with-param name="id" select="$spectitleValue" />
-        </xsl:call-template>
-      </xsl:variable>
-      <xsl:sequence
-        select="if (not(normalize-space($resolvedVariable)))
-                            then $spectitleValue
-                            else $resolvedVariable" />
-      <xsl:text> </xsl:text>
-      <fo:leader xsl:use-attribute-sets="section.leader section.color"/>
-    </fo:block>
-  </xsl:template>
-
 
   <!-- 
   Include heading with Specialties (and any other list that has a spectitle)

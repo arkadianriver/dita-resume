@@ -210,6 +210,11 @@
 <!ELEMENT  phone %phone.content; >
 <!ATTLIST  phone %phone.attributes; >
 
+<!-- @TODO: Add Experience -->
+
+<!-- @TODO: Add Education -->
+
+<!-- @TODO: Add Awards -->
 
 <!-- ===============
       Phrase data

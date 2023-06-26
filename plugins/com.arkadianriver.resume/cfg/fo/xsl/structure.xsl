@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:opentopic="http://www.idiominc.com/opentopic"
+  xmlns:dita2xslfo="http://dita-ot.sourceforge.net/ns/200910/dita2xslfo"
   version="2.0">
 
   <!--
   ===========================================================
-  GLOBAL PAGE FORMATTING
+  STRUCTURE AND COMMON
   ===========================================================
   -->
 
@@ -60,6 +62,31 @@
         </xsl:choose>
       </fo:flow>
     </fo:page-sequence>
+  </xsl:template>
+
+  <!-- 
+  Add the trailing leader to the DITA-OT section title template
+  -->
+  <xsl:template
+    match="*[contains(@class,' topic/section ')]
+            [@spectitle != '' and not(*[contains(@class, ' topic/title ')])]"
+    mode="dita2xslfo:section-heading"
+    priority="10">
+    <fo:block xsl:use-attribute-sets="section.title section.color">
+      <xsl:call-template name="commonattributes" />
+      <xsl:variable name="spectitleValue" as="xs:string" select="string(@spectitle)" />
+      <xsl:variable name="resolvedVariable">
+        <xsl:call-template name="getVariable">
+          <xsl:with-param name="id" select="$spectitleValue" />
+        </xsl:call-template>
+      </xsl:variable>
+      <xsl:sequence
+        select="if (not(normalize-space($resolvedVariable)))
+                            then $spectitleValue
+                            else $resolvedVariable" />
+      <xsl:text> </xsl:text>
+      <fo:leader xsl:use-attribute-sets="section.leader section.color"/>
+    </fo:block>
   </xsl:template>
 
 </xsl:stylesheet>
