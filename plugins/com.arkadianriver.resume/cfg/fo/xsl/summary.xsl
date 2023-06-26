@@ -13,7 +13,7 @@
   -->
 
   <!-- 
-  Copying this whole thing from DITA-OT so that I can add the trailing leader.
+  Add the trailing leader to the DITA-OT section title template
   -->
   <xsl:template
     match="*[contains(@class,' topic/section ')]
