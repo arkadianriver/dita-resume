@@ -110,9 +110,9 @@ case $1 in
 		;;
 	-pagesinstall)
 		pagesinstall
+		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita install
 		;;
 	-ghpages)
-		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita install
 		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/toc.ditamap -f resume
 		;;
 	*)
