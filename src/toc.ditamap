@@ -13,9 +13,9 @@
 				<dvrResourceSuffix>_ia</dvrResourceSuffix>
 			</ditavalmeta>
 		</ditavalref>
-		<ditavalref href="filters-tw.ditaval">
+		<ditavalref href="filters-wrt.ditaval">
 			<ditavalmeta>
-				<dvrResourceSuffix>_tw</dvrResourceSuffix>
+				<dvrResourceSuffix>_wrt</dvrResourceSuffix>
 			</ditavalmeta>
 		</ditavalref>
 	</topicref>
