@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <variables>
 
-  <!-- The header that appears on odd-numbered pages. -->
+  <!-- Override to empty the content default -->
   <variable id="Body odd header"/>
   <variable id="Body even header"/>
 

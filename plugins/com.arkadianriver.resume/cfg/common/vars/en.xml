@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <variables>
 
-  <!-- goes where Body odd footer would go -->
+  <!-- @TODO: determine total page count -->
   <variable id="Body odd footer"><param ref-name="pagenum"/> of 2</variable>
   <variable id="Body even footer"><param ref-name="pagenum"/> of 2</variable>
 

@@ -17,7 +17,6 @@ Todos:
 			☐ add tags to DTD and test
 	create transforms:
 		✔ set up plugin for custom xsl @done(2023-06-24 12:09)
-		✔ test map with ditavalref @done(2023-06-24 14:52)
 		✔ start top-level topics on separate pages @done(2023-06-24 16:22)
 		✔ split xsl files @done(2023-06-25 08:48)
 		✔ remove pagenum header and add to formatted footer @done(2023-06-25 17:21)
@@ -39,5 +38,7 @@ Todos:
 	build and test:
 		✔ set up a GitHub Actions build to post final PDFs to github pages @done(2023-06-25 23:50)
 	misc:
+		✔ test map with ditavalref @done(2023-06-24 14:52)
 		☐ add and use 'Open Sans' custom font
 		☐ use total pages in footer, if available
+		☐ perhaps, as POC, convert experience data from JSON or Spreadsheet to DITA
