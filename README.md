@@ -31,3 +31,38 @@ and under each Company section.
 
 See [TODO](TODO) file.
 
+### Design idea: experience data
+
+To support two resume types, (1) a traditional historical listing
+by company and position versus (2) a listing by specialty or role,
+we could author the entries individually as an array.
+The array could be in tabular form, such as from a spreadsheet
+or database, or as a group of records, such as from YAML or JSON.
+
+The problem with that, however, is if there's content in the items that
+we want to conref or apply metadata, such as company or product names,
+or keywords such as skills.
+Therefore, it's probably best to store the data as a list of records in
+specialized DITA within the document.
+
+### Design idea: summary data
+
+Similarly, the technologies listed in the summary could be reused
+or shared in other contexts, such as the skills listing in LinkedIn.
+So, rather than storing the technologies as comma-delimited sentences
+grouped by category, let's change that to a list of skills, perhaps
+keywords instead of list items so that they can be conreffed for use
+elsewhere
+(such as the experience data or indexes to analyze for Recruiter ATS optimization).
+Each skill would contain specialized _resume-domain_ attributes called
+`@skilltype` (technology, softskill, and the like) and `@jobrole`.
+The jobroles would be in a list as well to contain text, keyed off the `@jobrole`
+attributes and associated with the role in the `@audience` property.
+
+With that data, the current `<technologies>` element would be changed
+to the more general `<skills>` with a `@format` attribute to specify
+whether to list the skills _by-role_ as it's listed currently or
+_individually_ as a long alphabetized list.
+
+
+

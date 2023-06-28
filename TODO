@@ -41,4 +41,4 @@ Todos:
 		✔ test map with ditavalref @done(2023-06-24 14:52)
 		☐ add and use 'Open Sans' custom font
 		☐ use total pages in footer, if available
-		☐ perhaps, as POC, convert experience data from JSON or Spreadsheet to DITA
+		☐ convert exp as relational to hierarchy perhaps (see README)
