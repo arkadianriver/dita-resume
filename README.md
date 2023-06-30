@@ -62,6 +62,7 @@ roles:
     name: Project Management
 experience:
   presentation: by-role
+  positions:
     - from: 3303-02
       to: Present
       company: Spacely Sprockets
