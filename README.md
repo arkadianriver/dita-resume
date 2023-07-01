@@ -114,8 +114,8 @@ specifies 'by-role'.
       <jobtitle>Senior Sprocket Designer</jobtitle>
       <role>design</role>
       <accomplishments>
-        <accomplishment role="design">Designed the 3303 <keyword conref="sprocket"/> of the year.</accomplishment>
-        <accomplishment role="pm">Engaged a team of 50 in metal collection, surpassing <keyword conref="cogsw"/> by 30%.</accomplishment>
+        <accomplishment role="design">Designed the 3303 <keyword conref="#resume/sprocket"/> of the year.</accomplishment>
+        <accomplishment role="pm">Engaged a team of 50 in metal collection, surpassing <keyword conref="#resume/cogsw"/> by 30%.</accomplishment>
       </accomplishments>
     </position>
     <position>
@@ -125,8 +125,8 @@ specifies 'by-role'.
       <jobtitle>Manufacturing Engineer</jobtitle>
       <role>design</role>
       <accomplishments>
-        <accomplishment role="engineer">Improved <keyword conref="cog"/> engagement quality by a USO measurable standard of 0.3%</accomplishment>
-        <accomplishment role="engineer">Established improved standards of <keyword conref="cog"/> testing.</accomplishment>
+        <accomplishment role="engineer">Improved <keyword conref="#resume/cog"/> engagement quality by a USO measurable standard of 0.3%</accomplishment>
+        <accomplishment role="engineer">Established improved standards of <keyword conref="#resume/cog"/> testing.</accomplishment>
       </accomplishments>
     </position>
   </positions>
@@ -175,5 +175,5 @@ _individually_ as a long alphabetized list.
 Referenced elsewhere:
 
 ```xml
-<accomplishment role="engineer">Achieved Master Certification with <skill conref="bcog"/>.</accomplishment>
+<accomplishment role="engineer">Achieved Master Certification with <skill conref="#resume/bcog"/>.</accomplishment>
 ```
