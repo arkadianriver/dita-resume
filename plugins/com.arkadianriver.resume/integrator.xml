@@ -15,4 +15,12 @@
       location="${dita.plugin.com.arkadianriver.resume.dir}/cfg"/>
   </target>
 
+  <target name="xlsx2dita">
+    <!-- 
+    Checks for xlsx for experience and if found converts to DITA
+    -->
+    <java fork="true" jar="${dita.plugin.com.arkadianriver.resume.dir}/lib/ExperienceTable.jar">
+    </java>
+  </target>
+
 </project>

@@ -8,10 +8,14 @@
   <!-- Extension to specialize the DITA source with resume-specific tags -->
   <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
 
+  <!-- Check for xlsx files in experience and convert to DITA -->
+  <feature extension="dita.conductor.lib.import" file="lib/ExperienceTable.jar"/>
+  <feature extension="depend.preprocess.pre" value="xlsx2dita"/>
+
   <!-- Extension to change the output for nice looking PDF resumes -->
   <require plugin="org.dita.pdf2"/>
   <transtype name="resume" extends="pdf2" desc="Prints resume as PDF"/>
   <feature extension="dita.transtype.print" value="resume"/>
-  <feature extension="ant.import" file="build.xml"/>
+  <feature extension="ant.import" file="integrator.xml"/>
   
 </plugin>

@@ -4,6 +4,7 @@ usage () {
 	cat <<EOU
 usage: $0 [-o | -d | -2 | -f]
 where:
+-j Compile the Java library in the plugin
 -o Copy the plugin to Oxygen's DITA-OT 3.x
 -d DITA PDF build with the 'resume' transtype
 -2 Apache FOP build of temp/stage2.fo
@@ -152,13 +153,27 @@ splitpdf ()
 	rm $infile
 }
 
+compileJava ()
+{
+	pushd plugins/com.arkadianriver.resume/src
+	javac com/arkadianriver/resume/ExperienceTable.java
+	jar --create --file ../lib/ExperienceTable.jar --manifest Manifest.mf com/arkadianriver/resume/ExperienceTable.class
+	popd
+}
+
 case $1 in
+	-j)
+		compileJava
+		;;
 	-o)
 		oxycopy
 		echo "Don't forget to run the Run DITA-OT Integrator transform in Oxygen."
 		;;
 	-d)
 		dita -i src/toc.ditamap -f resume -t temp --clean.temp=no
+		;;
+	-dd)
+		dita -i src/toc.ditamap -f resume -t temp --clean.temp=no --debug=yes -l run.log
 		;;
 	-2)
 		runfop stage2.fo

@@ -39,6 +39,7 @@ Todos:
 		✔ set up a GitHub Actions build to post final PDFs to github pages @done(2023-06-25 23:50)
 	misc:
 		✔ test map with ditavalref @done(2023-06-24 14:52)
+		✔ @today test inserting a step with Java during preprocessing @done(2023-07-01 12:08)
 		☐ add and use 'Open Sans' custom font
 		☐ use total pages in footer, if available
 		☐ convert exp as relational to hierarchy perhaps (see README)

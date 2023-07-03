@@ -2,3 +2,6 @@ temp/
 out/
 temp-*
 *.xpr
+*.log
+
+*.class
