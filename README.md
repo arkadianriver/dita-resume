@@ -4,27 +4,92 @@
 
 ## Purpose
 
-Build separate résumés, each with contents prioritized by a specified job role.
+Builds separate résumés, each with contents prioritized by a specified job role.
+If you've been around a few years, you'll have picked up various roles along the way.
+When you're on the job hunt, you'll be uniquely qualified for various positions,
+but you'll want your resume to highlight the specific role you're applying for
+so that recruiters don't pass you by.
 
-## Technology
+The resumes created here all contain the same content
+(except the initial eye-catching description or title).
+When creating each one, however, you can indicate entries to filter to the
+top of each relevant section, depending on the job role you attribute to the entries.
 
-Made possible with the custom DITA-OT plugin
-in the `plugins/com.arkadianriver.resume` folder.
-The plugin:
+Sample output:
 
-- specializes new résumé elements from the base topic type.
-- implements a custom XSL-FO `pdf2` transform type called _resume_.
+- [Developer role](https://arkadianriver.github.io/dita-resume/resume_dev.pdf)
+- [Architecture role](https://arkadianriver.github.io/dita-resume/resume_ia.pdf)
+- [Writing role](https://arkadianriver.github.io/dita-resume/resume_wrt.pdf)
 
-## Features
 
-Each entry under a Position section is assigned one or more job roles.
-Assign job roles to each skill, technology category, and accomplishment.
+## Prerequisites
+
+- [DITA-OT](https://www.dita-ot.org/download) (Tested with version 4.0.2 and version 3.x, which comes with Oxygen Editor 25.1.)
+- DITA-OT requires [OpenJDK v17 or greater](https://www.dita-ot.org/dev/topics/prerequisite-software.html)
+- An XML Editor like Oxygen Editor is useful, but not required.
+  The RedHat XML extension for Visual Studio Code works fine as long as the DITA DTD catalog is configured.
+
+No need for an XSL-FO processor;
+the default Apache FOP that is distributed with DITA-OT is used here.
+
+
+## Use
+
+Edit the source DITA file with your content ([`src/resume.dita`](src/resume.dita)).
+
+To enable job role prioritization:
+
+1.  Choose your roles and decide the values to provide to the `@jobrole` attribute.
+
+1.  For each role, provide a title or description of you that highlights that role.
+    https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/src/resume.dita#L6-L8
+
+1.  Assign one or more job roles to the entries under the Specialties, Technologies, and Accomplishments blocks.
+    https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/src/resume.dita#L25
+    https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/src/resume.dita#L31
+    https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/src/resume.dita#L82
+
+A couple of data input conventions:
+
+- When specifying dates, use the format `YYYY-MM` in all cases.
+- When specifying the phone number, use only digits.
+  (TODO: change the country code to a selectable attribute off the phone element)
+
 When you build a résumé with the custom `resume` transform type,
-provide the job role you want prioritized,
-and entries with that role will be listed first under the Summary Skills and
+provide the job role you want prioritized.
+
+```bash
+./run.sh -d dev
+```
+
+Entries with that role will be listed first under the Summary Skills and
 Technologies sections and also under each Position section.
 Also, the description with that role will be included
 while descriptions for other roles are excluded, same as props values.
+
+
+## Technology behind it
+
+Made possible with the custom DITA-OT plugin
+in the `plugins/com.arkadianriver.resume` folder,
+which
+specializes new résumé elements from the base topic type
+and implements a custom XSL-FO `pdf2` transform type called _resume_.
+
+The XSL that provides the Summary Skills and Technologies section groupings:
+https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/plugins/com.arkadianriver.resume/cfg/fo/xsl/structure.xsl#L172-L178
+
+The XSL for the description filtering (since it's a base attribute rather than a props one):
+https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/plugins/com.arkadianriver.resume/cfg/fo/xsl/header.xsl#L12-L16
+
+### Other fun things:
+
+- Formatting the phone number.
+  The code in the [header.xsl](plugins/com.arkadianriver.resume/cfg/fo/xsl/header.xsl) file
+  uses a key-value mapping in the [vars.xsl](plugins/com.arkadianriver.resume/cfg/fo/xsl/vars) file.
+
+- A date formatting function.
+  https://github.com/arkadianriver/dita-resume/blob/38fd806d51412c666be42e35cf152e63911c0b97/plugins/com.arkadianriver.resume/cfg/fo/xsl/structure.xsl#L149-L161
 
 
 ## What's next
