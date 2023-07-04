@@ -7,14 +7,14 @@ Todos:
 			✔ create specialized DTD @done(2023-06-24 01:13)
 			✔ validate in Oxygen and test domains generalized build @done(2023-06-24 02:15)
 	  exp section:
-			☐ cut'n'paste exp
-			☐ add tags to DTD and test
+			✔ cut'n'paste exp @done(2023-07-03 19:20)
+			✔ add tags to DTD and test @done(2023-07-03 19:20)
 		edu section:
-			☐ cut'n'paste edu
-			☐ add tags to DTD and test
+			✔ cut'n'paste edu @done(2023-07-03 19:20)
+			✔ add tags to DTD and test @done(2023-07-03 19:20)
 		awards section:
-			☐ cut'n'paste awards
-			☐ add tags to DTD and test
+			✔ cut'n'paste awards @done(2023-07-03 19:20)
+			✔ add tags to DTD and test @done(2023-07-03 19:20)
 	create transforms:
 		✔ set up plugin for custom xsl @done(2023-06-24 12:09)
 		✔ start top-level topics on separate pages @done(2023-06-24 16:22)
@@ -22,12 +22,14 @@ Todos:
 		✔ remove pagenum header and add to formatted footer @done(2023-06-25 17:21)
 		header section:
 			✔ render contact list as single line @done(2023-06-24 23:01)
+			☐ @today make use of jobroles (or one title for all)
 		summary section:
 			✔ figure out spectitle for sections @done(2023-06-25 09:57)
 			✔ figure out spectitle for lists, L10n compatible @done(2023-06-25 14:42)
 			✔ reformat technologies list @done(2023-06-25 15:54)
 		exp section:
-			☐ @today capture shortdesc/ph audience for bullet ordering
+			☐ @today create fo:block structure
+			☐ make use of jobroles
 		edu section:
 			☐ expecting simple fo:blocks with header
 		awards section:
@@ -39,7 +41,7 @@ Todos:
 		✔ set up a GitHub Actions build to post final PDFs to github pages @done(2023-06-25 23:50)
 	misc:
 		✔ test map with ditavalref @done(2023-06-24 14:52)
-		✔ @today test inserting a step with Java during preprocessing @done(2023-07-01 12:08)
+		✔ test inserting a step with Java during preprocessing @done(2023-07-01 12:08)
 		☐ add and use 'Open Sans' custom font
 		☐ use total pages in footer, if available
 		☐ convert exp as relational to hierarchy perhaps (see README)
