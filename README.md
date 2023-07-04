@@ -21,6 +21,12 @@ Sample output:
 - [Architecture role](https://arkadianriver.github.io/dita-resume/resume_ia.pdf)
 - [Writing role](https://arkadianriver.github.io/dita-resume/resume_wrt.pdf)
 
+Because this is DITA, you can of course include or exclude varying content as normal,
+but use a property other than `jobrole` to do that.
+I chose not to filter because my three roles are somewhat related to the same
+niche in the software industry, and I didn't want to exclude any accomplishments.
+Also, my content fills exactly two pages and it was easier to simply rearrange
+than pick and choose.
 
 ## Prerequisites
 
