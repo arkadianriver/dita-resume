@@ -3,9 +3,9 @@
 <resume id="resume-gary-faircloth">
     <name>Gary Faircloth</name>
     <header>
-        <description jobrole="dev">Technical Content Software Development, DevOps, Authoring, and Architecture</description>
-        <description jobrole="ia">Technical Content Architecture, Authoring, DevOps, and Software Development</description>
-        <description jobrole="wrt">Technical Content Writing, Architecture, DevOps, and Software Development</description>
+        <description jobrole="dev">Content DevOps and Software Development, Technical Writing, and Information Architecture</description>
+        <description jobrole="ia">Information Architecture, Technical Writing, and Content DevOps and Software Development</description>
+        <description jobrole="wrt">Technical Writing, Information Architecture, and Content DevOps and Software Development</description>
         <contact>
             <phone><countrycode>1</countrycode><number>4086466157</number></phone>
             <email>arkadianriver@gmail.com</email>
@@ -15,7 +15,7 @@
     </header>
     <resumebody>
         <summary>
-            <p>Coordinating with users, engineers, designers, writers, and translators, I have
+            <p>Coordinating with users, subject matter experts, designers, writers, and translators, I have
                 carried many UIs and publications from design to release. Throughout the development
                 process, many look to me for coaching, leadership, and training on new technologies.
                 I inspire a fun and energetic atmosphere in which to create.</p>
@@ -34,14 +34,14 @@
                         TravisCI, GitHub workflows, Docker</techcategorylist>
                 </technology>
                 <technology>
-                    <techcategory>Technical writing and training</techcategory>
-                    <techcategorylist>DITA, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
-                        XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</techcategorylist>
-                </technology>
-                <technology>
                     <techcategory>Software development</techcategory>
                     <techcategorylist>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
                         XSL-FO, Perl, Git, bash shell</techcategorylist>
+                </technology>
+                <technology>
+                    <techcategory>Technical writing and training</techcategory>
+                    <techcategorylist>DITA, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
+                        XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</techcategorylist>
                 </technology>
             </technologies>
         </summary>
