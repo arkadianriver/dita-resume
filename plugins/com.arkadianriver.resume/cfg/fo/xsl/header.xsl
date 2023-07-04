@@ -3,6 +3,19 @@
   xmlns:fo="http://www.w3.org/1999/XSL/Format"
   version="2.0">
 
+  <!-- 
+  ===========
+  Description
+  ===========
+  -->
+
+  <xsl:template match="*[contains(@class, ' resume/description ')]">
+    <xsl:if test="@jobrole = $jobrole">
+      <xsl:value-of select="."/>
+    </xsl:if>
+  </xsl:template>
+
+
   <!--
   ===========================================================
   CONTACT LIST SECTION: Write contact list as a single line.

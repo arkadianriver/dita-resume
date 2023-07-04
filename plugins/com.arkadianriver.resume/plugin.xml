@@ -15,6 +15,7 @@
   <!-- Extension to change the output for nice looking PDF resumes -->
   <require plugin="org.dita.pdf2"/>
   <transtype name="resume" extends="pdf2" desc="Prints resume as PDF"/>
+  <feature extension="dita.conductor.pdf2.param" file="params.xml"/>
   <feature extension="dita.transtype.print" value="resume"/>
   <feature extension="ant.import" file="integrator.xml"/>
   

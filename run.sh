@@ -170,10 +170,10 @@ case $1 in
 		echo "Don't forget to run the Run DITA-OT Integrator transform in Oxygen."
 		;;
 	-d)
-		dita -i src/toc.ditamap -f resume -t temp --clean.temp=no
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no
 		;;
 	-dd)
-		dita -i src/toc.ditamap -f resume -t temp --clean.temp=no --debug=yes -l run.log
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log
 		;;
 	-2)
 		runfop stage2.fo
@@ -189,7 +189,11 @@ case $1 in
 		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita install
 		;;
 	-ghpages)
-		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/toc.ditamap -f resume
+		roles=(dev ia wrt)
+		for ((i=0; i < 3; ++i)); do
+			$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/resume.dita -f resume \
+			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${roles[$i]}
+		done
 		outnojekyll
 		;;
 	*)

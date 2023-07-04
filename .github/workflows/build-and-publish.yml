@@ -26,18 +26,18 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-    - name: Install pdftk [🠋]
-      run: |
-        sudo apt install -y pdftk
+    #- name: Install pdftk [🠋]
+    #  run: |
+    #    sudo apt install -y pdftk
     - name: Install and Setup DITA-OT ${{ env.OT_VRM }} [🠋]
       run: |
         ./run.sh -pagesinstall
     - name: Build Output 🔧
       run: |
         ./run.sh -ghpages
-    - name: Split PDF ✂️
-      run: |
-        ./run.sh -p
+    #- name: Split PDF ✂️
+    #  run: |
+    #    ./run.sh -p
     - name: Deploy to Pages 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:

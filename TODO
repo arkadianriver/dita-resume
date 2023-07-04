@@ -22,18 +22,18 @@ Todos:
 		✔ remove pagenum header and add to formatted footer @done(2023-06-25 17:21)
 		header section:
 			✔ render contact list as single line @done(2023-06-24 23:01)
-			☐ @today make use of jobroles (or one title for all)
+			✔ @today make use of jobroles (or one title for all) @done(2023-07-03 23:58)
 		summary section:
 			✔ figure out spectitle for sections @done(2023-06-25 09:57)
 			✔ figure out spectitle for lists, L10n compatible @done(2023-06-25 14:42)
 			✔ reformat technologies list @done(2023-06-25 15:54)
 		exp section:
-			☐ @today create fo:block structure
+			✔ @today create fo:block structure @done(2023-07-03 19:58)
 			☐ make use of jobroles
 		edu section:
-			☐ expecting simple fo:blocks with header
+			✔ expecting simple fo:blocks with header @done(2023-07-03 21:03)
 		awards section:
-			☐ expecting simple fo:blocks with header
+			✔ expecting simple fo:blocks with header @done(2023-07-03 20:44)
 	fix for multipage resumes:
 		✔ restart page numbering for each top-level topic @done(2023-06-24 18:09)
 		✔ split PDF at top-level bookmarks @done(2023-06-25 18:22)

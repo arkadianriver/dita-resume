@@ -14,16 +14,6 @@ Made possible with a custom DITA-OT plugin:
 
 - Specializes new resume elements from the base topic type.
 - Implements a custom XSL-FO `pdf2` transform type called _resume_.
-- **Bonus:** Makes use of the _ditavalref_ map element to build
-  the separate resumes in one run.
-  (A working POC, but perhaps not ideal, since they need to be split
-  into separate documents again in post-processing.)  
-  @TODO:
-  Will most likely remove this and have three separate builds.
-  - Return the page-sequences in `cfg/fo/xsl/structure.xsl` 
-    back to the original top level rather than the current specialized heading-one level.
-  - Remove post-processing `pdftk` file splitting from
-    `run.sh`, and remove its installation from the GitHub workflow.
 
 ## Features
 
@@ -100,11 +90,11 @@ Then, I'd only need to re-swizzle things with XSLT if `@outputclass`
 specifies 'by-role'.
 
 ```xml
-<roles>
-  <role id="design">Component Design</role>
-  <role id="pm">Project Management</role>
-  <role id="engineering">Manufacturing Engineering</role>
-</roles>
+<jobroles>
+  <jobrole id="design">Component Design</jobrole>
+  <jobrole id="pm">Project Management</jobrole>
+  <jobrole id="engineering">Manufacturing Engineering</jobrole>
+</jobroles>
 <experience outputclass="by-position">
   <positions>
     <position>
@@ -112,10 +102,9 @@ specifies 'by-role'.
       <location>Jet City</location>
       <dates><from>3303-02</from><to>Present</to></dates>
       <jobtitle>Senior Sprocket Designer</jobtitle>
-      <role>design</role>
       <accomplishments>
-        <accomplishment role="design">Designed the 3303 <keyword conref="#resume/sprocket"/> of the year.</accomplishment>
-        <accomplishment role="pm">Engaged a team of 50 in metal collection, surpassing <keyword conref="#resume/cogsw"/> by 30%.</accomplishment>
+        <accomplishment jobrole="design">Designed the 3303 <keyword conref="#resume/sprocket"/> of the year.</accomplishment>
+        <accomplishment jobrole="pm">Engaged a team of 50 in metal collection, surpassing <keyword conref="#resume/cogsw"/> by 30%.</accomplishment>
       </accomplishments>
     </position>
     <position>
@@ -123,10 +112,9 @@ specifies 'by-role'.
       <location>Jet City</location>
       <dates><from>3290-12</from><to>3303-01</to></dates>
       <jobtitle>Manufacturing Engineer</jobtitle>
-      <role>design</role>
       <accomplishments>
-        <accomplishment role="engineer">Improved <keyword conref="#resume/cog"/> engagement quality by a USO measurable standard of 0.3%</accomplishment>
-        <accomplishment role="engineer">Established improved standards of <keyword conref="#resume/cog"/> testing.</accomplishment>
+        <accomplishment jobrole="engineer">Improved <keyword conref="#resume/cog"/> engagement quality by a USO measurable standard of 0.3%</accomplishment>
+        <accomplishment jobrole="engineer">Established improved standards of <keyword conref="#resume/cog"/> testing.</accomplishment>
       </accomplishments>
     </position>
   </positions>

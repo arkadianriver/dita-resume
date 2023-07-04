@@ -14,7 +14,7 @@
 
   <!-- Less white space overall but with more at bottom for pagenum -->
   <xsl:variable name="page-margins">12mm</xsl:variable>
-  <xsl:variable name="page-margin-bottom">16mm</xsl:variable>
+  <!-- <xsl:variable name="page-margin-bottom">16mm</xsl:variable> -->
 
   <!-- Only print resumes, nothing else -->
   <xsl:variable name="generate-front-cover" select="false()" />

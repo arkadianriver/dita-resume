@@ -13,6 +13,7 @@
     -->
     <property name="customization.dir"
       location="${dita.plugin.com.arkadianriver.resume.dir}/cfg"/>
+    <echo>Job role: ${args.jobrole}</echo>
   </target>
 
   <target name="xlsx2dita">
