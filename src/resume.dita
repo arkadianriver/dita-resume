@@ -20,25 +20,25 @@
                 process, many look to me for coaching, leadership, and training on new technologies.
                 I inspire a fun and energetic atmosphere in which to create.</p>
             <specialties>
-                <specialty>Software development for documentation production and quality assurance</specialty>
-                <specialty>Support and DevOps for documentation authoring and production tools</specialty>
-                <specialty>Technical writing of user and development documentation</specialty>
-                <specialty>UI design methodologies</specialty>
-                <specialty>Internal professional vitality training</specialty>
-                <specialty>Translation coordination</specialty>
+                <specialty jobrole="dev">Software development for documentation production and quality assurance</specialty>
+                <specialty jobrole="ia">Support and DevOps for documentation authoring and production tools</specialty>
+                <specialty jobrole="wrt">Technical writing of user and development documentation</specialty>
+                <specialty jobrole="wrt">UI design methodologies</specialty>
+                <specialty jobrole="ia">Internal professional vitality training</specialty>
+                <specialty jobrole="ia">Translation coordination</specialty>
             </specialties>
             <technologies>
-                <technology>
+                <technology jobrole="ia dev">
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
                     <techcategorylist>DITA-OT, Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
                         TravisCI, GitHub workflows, Docker</techcategorylist>
                 </technology>
-                <technology>
+                <technology jobrole="dev">
                     <techcategory>Software development</techcategory>
                     <techcategorylist>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
                         XSL-FO, Perl, Git, bash shell</techcategorylist>
                 </technology>
-                <technology>
+                <technology jobrole="wrt">
                     <techcategory>Technical writing and training</techcategory>
                     <techcategorylist>DITA, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
                         XML Author, Draw.io, Kdenlive, OBS Studio, Camtasia, GiMP, Inkscape</techcategorylist>

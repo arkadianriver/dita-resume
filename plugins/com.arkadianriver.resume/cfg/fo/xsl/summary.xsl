@@ -60,7 +60,7 @@
     <fo:list-block
       xsl:use-attribute-sets="ul">
       <xsl:call-template name="commonattributes" />
-      <xsl:apply-templates />
+      <xsl:call-template name="groupByJobrole" />
     </fo:list-block>
     <xsl:apply-templates
       select="*[contains(@class,' ditaot-d/ditaval-endprop ')]" mode="outofline" />
@@ -71,7 +71,7 @@
       mode="outofline" />
     <fo:block xsl:use-attribute-sets="tech.dl">
       <xsl:call-template name="commonattributes" />
-      <xsl:apply-templates />
+      <xsl:call-template name="groupByJobrole" />
     </fo:block>
     <xsl:apply-templates
       select="*[contains(@class,' ditaot-d/ditaval-endprop ')]" mode="outofline" />

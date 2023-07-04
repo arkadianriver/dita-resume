@@ -116,11 +116,11 @@ outnojekyll ()
 <body>
 	<main>
 		<article>
-			<h1>DITA-created role-based resumes</h1>
+			<h1>DITA-created role-based résumés</h1>
 			<div>
-				<div><div><a href="resume_dev.pdf">Resumé ordered for Content DevOps Development</a></div></div>
-				<div><div><a href="resume_ia.pdf">Resumé ordered for Information Architecture</a></div></div>
-				<div><div><a href="resume_wrt.pdf">Resumé ordered for Technical Writing</a></div></div>
+				<div><div><a href="resume_dev.pdf">Résumé ordered for Content DevOps Development</a></div></div>
+				<div><div><a href="resume_ia.pdf">Résumé ordered for Information Architecture</a></div></div>
+				<div><div><a href="resume_wrt.pdf">Résumé ordered for Technical Writing</a></div></div>
 			</div>
 		</article>
 	</main>
@@ -170,10 +170,14 @@ case $1 in
 		echo "Don't forget to run the Run DITA-OT Integrator transform in Oxygen."
 		;;
 	-d)
-		dita -i src/resume.dita -f resume -t temp --clean.temp=no
+		shift
+		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no $roleflag
 		;;
 	-dd)
-		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log
+		shift
+		[[ $1 != '' ]] && roleflag=-Djobrole=$1
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log $roleflag
 		;;
 	-2)
 		runfop stage2.fo

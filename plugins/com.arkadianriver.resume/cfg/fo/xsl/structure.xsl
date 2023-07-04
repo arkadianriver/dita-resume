@@ -65,6 +65,63 @@
   </xsl:template>
 
   <!-- 
+  Footers, using last page as a parameter
+  -->
+  <xsl:template name="insertBodyOddFooter">
+    <fo:static-content flow-name="odd-body-footer">
+      <fo:block xsl:use-attribute-sets="__body__odd__footer">
+        <xsl:call-template name="getVariable">
+          <xsl:with-param name="id" select="'Body odd footer'" />
+          <xsl:with-param name="params">
+            <heading>
+              <fo:inline xsl:use-attribute-sets="__body__odd__footer__heading">
+                <fo:retrieve-marker retrieve-class-name="current-header" />
+              </fo:inline>
+            </heading>
+            <pagenum>
+              <fo:inline xsl:use-attribute-sets="__body__odd__footer__pagenum">
+                <fo:page-number />
+              </fo:inline>
+            </pagenum>
+            <pagenumlast>
+              <fo:inline xsl:use-attribute-sets="__body__odd__footer__pagenumlast">
+                <fo:page-number-citation ref-id="last-page" />
+              </fo:inline>
+            </pagenumlast>
+          </xsl:with-param>
+        </xsl:call-template>
+      </fo:block>
+    </fo:static-content>
+  </xsl:template>
+
+  <xsl:template name="insertBodyEvenFooter">
+    <fo:static-content flow-name="even-body-footer">
+      <fo:block xsl:use-attribute-sets="__body__even__footer">
+        <xsl:call-template name="getVariable">
+          <xsl:with-param name="id" select="'Body even footer'" />
+          <xsl:with-param name="params">
+            <heading>
+              <fo:inline xsl:use-attribute-sets="__body__even__footer__heading">
+                <fo:retrieve-marker retrieve-class-name="current-header" />
+              </fo:inline>
+            </heading>
+            <pagenum>
+              <fo:inline xsl:use-attribute-sets="__body__even__footer__pagenum">
+                <fo:page-number />
+              </fo:inline>
+            </pagenum>
+            <pagenumlast>
+              <fo:inline xsl:use-attribute-sets="__body__even__footer__pagenumlast">
+                <fo:page-number-citation ref-id="last-page" />
+              </fo:inline>
+            </pagenumlast>
+          </xsl:with-param>
+        </xsl:call-template>
+      </fo:block>
+    </fo:static-content>
+  </xsl:template>
+
+  <!-- 
   Add the trailing leader to the DITA-OT section title template
   -->
   <xsl:template
@@ -85,7 +142,7 @@
                             then $spectitleValue
                             else $resolvedVariable" />
       <xsl:text> </xsl:text>
-      <fo:leader xsl:use-attribute-sets="section.leader section.color"/>
+      <fo:leader xsl:use-attribute-sets="section.leader section.color" />
     </fo:block>
   </xsl:template>
 
@@ -95,10 +152,11 @@
   <xsl:template name="getMon">
     <xsl:param name="yearmm" select="@yearmm" />
     <xsl:variable name="monNum">
-      <xsl:value-of select="replace($yearmm, '.*-(\d\d)$', '$1')"/>
+      <xsl:value-of select="replace($yearmm, '.*-(\d\d)$', '$1')" />
     </xsl:variable>
-    <xsl:call-template name="getVariable">
-      <xsl:with-param name="id" select="concat('mon_', $monNum)"/>
+    <xsl:call-template
+      name="getVariable">
+      <xsl:with-param name="id" select="concat('mon_', $monNum)" />
     </xsl:call-template>
   </xsl:template>
 
@@ -107,7 +165,16 @@
   -->
   <xsl:template name="getYear">
     <xsl:param name="yearmm" select="@yearmm" />
-    <xsl:value-of select="replace($yearmm, '^(\d\d\d\d).*', '$1')"/>
+    <xsl:value-of
+      select="replace($yearmm, '^(\d\d\d\d).*', '$1')" />
+  </xsl:template>
+
+  <!--
+  List prioritization
+  -->
+  <xsl:template name="groupByJobrole">
+    <xsl:apply-templates select="*[contains(@jobrole, $jobrole)]" />
+    <xsl:apply-templates select="*[not(contains(@jobrole, $jobrole))]" />
   </xsl:template>
 
 </xsl:stylesheet>

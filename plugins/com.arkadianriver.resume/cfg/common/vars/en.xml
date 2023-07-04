@@ -2,8 +2,8 @@
 <variables>
 
   <!-- @TODO: determine total page count -->
-  <variable id="Body odd footer"><param ref-name="pagenum"/> of 2</variable>
-  <variable id="Body even footer"><param ref-name="pagenum"/> of 2</variable>
+  <variable id="Body odd footer"><param ref-name="pagenum"/> of <param ref-name="pagenumlast"/></variable>
+  <variable id="Body even footer"><param ref-name="pagenum"/> of <param ref-name="pagenumlast"/></variable>
 
   <!-- Resume section titles -->
   <variable id="st_summary">Summary</variable>

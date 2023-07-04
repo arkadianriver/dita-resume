@@ -9,6 +9,7 @@ Todos:
 	  exp section:
 			✔ cut'n'paste exp @done(2023-07-03 19:20)
 			✔ add tags to DTD and test @done(2023-07-03 19:20)
+			☐ <positions> is unnecessary. And make <position> a topic/p
 		edu section:
 			✔ cut'n'paste edu @done(2023-07-03 19:20)
 			✔ add tags to DTD and test @done(2023-07-03 19:20)
@@ -22,14 +23,14 @@ Todos:
 		✔ remove pagenum header and add to formatted footer @done(2023-06-25 17:21)
 		header section:
 			✔ render contact list as single line @done(2023-06-24 23:01)
-			✔ @today make use of jobroles (or one title for all) @done(2023-07-03 23:58)
+			✔ make use of jobroles (or one title for all) @done(2023-07-03 23:58)
 		summary section:
 			✔ figure out spectitle for sections @done(2023-06-25 09:57)
 			✔ figure out spectitle for lists, L10n compatible @done(2023-06-25 14:42)
 			✔ reformat technologies list @done(2023-06-25 15:54)
 		exp section:
-			✔ @today create fo:block structure @done(2023-07-03 19:58)
-			☐ make use of jobroles
+			✔ create fo:block structure @done(2023-07-03 19:58)
+			✔ make use of jobroles @done(2023-07-04 11:12)
 		edu section:
 			✔ expecting simple fo:blocks with header @done(2023-07-03 21:03)
 		awards section:
@@ -43,5 +44,5 @@ Todos:
 		✔ test map with ditavalref @done(2023-06-24 14:52)
 		✔ test inserting a step with Java during preprocessing @done(2023-07-01 12:08)
 		☐ add and use 'Open Sans' custom font
-		☐ use total pages in footer, if available
+		✔ use total pages in footer, if available @done(2023-07-04 13:12)
 		☐ convert exp as relational to hierarchy perhaps (see README)

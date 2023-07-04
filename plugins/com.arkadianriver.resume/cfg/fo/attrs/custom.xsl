@@ -36,6 +36,14 @@
     <xsl:attribute name="font-weight">normal</xsl:attribute>
   </xsl:attribute-set>
 
+  <!-- pagenumlast is a custom param, but providing potential attributes anyway -->
+  <xsl:attribute-set name="__body__odd__footer__pagenumlast">
+    <xsl:attribute name="font-weight">normal</xsl:attribute>
+  </xsl:attribute-set>
+  <xsl:attribute-set name="__body__even__footer__pagenumlast">
+    <xsl:attribute name="font-weight">normal</xsl:attribute>
+  </xsl:attribute-set>
+
   <!-- footers light colored, smaller, and brought in from margin -->
   <xsl:attribute-set name="odd__footer">
     <xsl:attribute name="font-size">0.8em</xsl:attribute>
@@ -129,6 +137,5 @@
   <xsl:attribute-set name="tech.dd">
     <xsl:attribute name="start-indent">4mm</xsl:attribute>
   </xsl:attribute-set>
-
 
 </xsl:stylesheet>

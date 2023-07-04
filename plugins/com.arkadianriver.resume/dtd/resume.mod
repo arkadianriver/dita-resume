@@ -491,9 +491,9 @@
 <!ATTLIST  website           %global-atts;  class CDATA "- topic/li  resume/website ">
 <!ATTLIST  summary           %global-atts;  class CDATA "- topic/section  resume/summary " spectitle CDATA "st_summary">
 <!ATTLIST  specialties       %global-atts;  class CDATA "- topic/ul  resume/specialties " spectitle CDATA "st_specialties">
-<!ATTLIST  specialty         %global-atts;  class CDATA "- topic/li  resume/specialty ">
+<!ATTLIST  specialty         %global-atts;  class CDATA "- topic/li  resume/specialty " %jobrole-d-attribute;>
 <!ATTLIST  technologies      %global-atts;  class CDATA "- topic/dl  resume/technologies " spectitle CDATA "st_technologies">
-<!ATTLIST  technology        %global-atts;  class CDATA "- topic/dlentry  resume/technology ">
+<!ATTLIST  technology        %global-atts;  class CDATA "- topic/dlentry  resume/technology " %jobrole-d-attribute;>
 <!ATTLIST  techcategory      %global-atts;  class CDATA "- topic/dt  resume/techcategory ">
 <!ATTLIST  techcategorylist  %global-atts;  class CDATA "- topic/dd  resume/techcategorylist ">
 <!ATTLIST  experience        %global-atts;  class CDATA "- topic/section  resume/experience " spectitle CDATA "st_experience">

@@ -14,7 +14,8 @@
       <fo:block xsl:use-attribute-sets="subsection.title">
         <xsl:value-of select="school"/>
       </fo:block>
-      <fo:block>
+      <fo:block xsl:use-attribute-sets="p">
+        <xsl:call-template name="commonattributes"/>
         <fo:inline>
           <xsl:value-of select="degree"/>,
           <xsl:if test="field">
