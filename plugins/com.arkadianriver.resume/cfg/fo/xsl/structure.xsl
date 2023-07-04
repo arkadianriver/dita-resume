@@ -89,4 +89,25 @@
     </fo:block>
   </xsl:template>
 
+  <!--
+  Return 3-char month from YYYY-MM date (using table in en.xml)
+  -->
+  <xsl:template name="getMon">
+    <xsl:param name="yearmm" select="@yearmm" />
+    <xsl:variable name="monNum">
+      <xsl:value-of select="replace($yearmm, '.*-(\d\d)$', '$1')"/>
+    </xsl:variable>
+    <xsl:call-template name="getVariable">
+      <xsl:with-param name="id" select="concat('mon_', $monNum)"/>
+    </xsl:call-template>
+  </xsl:template>
+
+  <!--
+  Return year from YYYY-MM date
+  -->
+  <xsl:template name="getYear">
+    <xsl:param name="yearmm" select="@yearmm" />
+    <xsl:value-of select="replace($yearmm, '^(\d\d\d\d).*', '$1')"/>
+  </xsl:template>
+
 </xsl:stylesheet>

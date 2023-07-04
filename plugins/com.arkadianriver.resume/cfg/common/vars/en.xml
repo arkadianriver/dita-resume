@@ -13,4 +13,21 @@
   <variable id="st_education">Education</variable>
   <variable id="st_awards">Awards</variable>
 
+  <!-- Awards text -->
+  <variable id="issued_by_x">Issued by <param ref-name="issuedby"/></variable>
+
+  <!-- Month abbreviations -->
+  <variable id="mon_01">Jan</variable>
+  <variable id="mon_02">Feb</variable>
+  <variable id="mon_03">Mar</variable>
+  <variable id="mon_04">Apr</variable>
+  <variable id="mon_05">May</variable>
+  <variable id="mon_06">Jun</variable>
+  <variable id="mon_07">Jul</variable>
+  <variable id="mon_08">Aug</variable>
+  <variable id="mon_09">Sep</variable>
+  <variable id="mon_10">Oct</variable>
+  <variable id="mon_11">Nov</variable>
+  <variable id="mon_12">Dec</variable>
+
 </variables>
