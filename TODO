@@ -21,6 +21,7 @@ Todos:
 		✔ start top-level topics on separate pages @done(2023-06-24 16:22)
 		✔ split xsl files @done(2023-06-25 08:48)
 		✔ remove pagenum header and add to formatted footer @done(2023-06-25 17:21)
+                ☐ improve the 'contains' selection of job role values (by word boundaries)
 		header section:
 			✔ render contact list as single line @done(2023-06-24 23:01)
 			✔ make use of jobroles (or one title for all) @done(2023-07-03 23:58)
