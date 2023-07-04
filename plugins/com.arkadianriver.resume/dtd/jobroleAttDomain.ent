@@ -1,0 +1,9 @@
+<!ENTITY % jobrole-d-attribute 
+  "jobrole 
+    CDATA 
+    #IMPLIED
+  "
+>
+<!ENTITY jobrole-d-att
+   "a(base  jobrole)"
+>

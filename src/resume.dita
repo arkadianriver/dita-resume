@@ -3,11 +3,9 @@
 <resume id="resume-gary-faircloth">
     <name>Gary Faircloth</name>
     <header>
-        <description>
-            <ph audience="dev">Technical Content Software Development, DevOps, Authoring, and Architecture</ph>
-            <ph audience="ia">Technical Content Architecture, Authoring, DevOps, and Software Development</ph>
-            <ph audience="wrt">Technical Content Authoring, Architecture, DevOps, and Software Development</ph>
-        </description>
+        <description jobrole="dev">Technical Content Software Development, DevOps, Authoring, and Architecture</description>
+        <description jobrole="ia">Technical Content Architecture, Authoring, DevOps, and Software Development</description>
+        <description jobrole="wrt">Technical Content Writing, Architecture, DevOps, and Software Development</description>
         <contact>
             <phone><countrycode>1</countrycode><number>4086466157</number></phone>
             <email>arkadianriver@gmail.com</email>
@@ -47,8 +45,110 @@
                 </technology>
             </technologies>
         </summary>
-        <!-- @TODO: Add Experience section with bullets ordered by role -->
-        <!-- @TODO: Add Education section -->
-        <!-- @TODO: Add Awards section -->
+        <experience>
+            <positions>
+                <position>
+                    <organization>IBM</organization>
+                    <location>Seattle, WA</location>
+                    <datefrom>2020-01</datefrom>
+                    <dateto>2023-05</dateto>
+                    <jobtitle>Content DevOps and Support Lead</jobtitle>
+                    <accomplishments>
+                        <accomplishment jobrole="dev">Influenced Data and AI Content Tools strategy toward corporate and industry standards, while leading a small development team to support content designers in the organization.</accomplishment>
+                        <accomplishment jobrole="dev">Developed, documented, and held training on the Metalsmith and LiquidJS markdown authoring environment for Cloud Pak for Data content, to migrate from Jekyll for a new translation workflow.</accomplishment>
+                        <accomplishment jobrole="dev">Achieved top search ranking for Cloud Pak for Data as a Service documentation by writing and deploying the NodeJS backend sitemap.xml generation utility.</accomplishment>
+                        <accomplishment jobrole="dev">Developed the design layout, automated build process, and localization workflow for the service documentation landing pages for IBM Cloud Pak for Data, by using IBM Carbon CSS, DITA XSLT overrides, Hugo, Ruby, and IBM Globalization Pipeline CLI tools. Documented and held training on the process.</accomplishment>
+                    </accomplishments>
+                </position>
+                <position>
+                    <organization>IBM</organization>
+                    <location>Seattle, WA</location>
+                    <datefrom>2017-09</datefrom>
+                    <dateto>2019-12</dateto>
+                    <jobtitle>Content DevOps Developer</jobtitle>
+                    <accomplishments>
+                        <accomplishment jobrole="dev">Provided development support to the Cloud Pak for Data and business partner content design teams.</accomplishment>
+                        <accomplishment jobrole="dev wrt">Developed, documented, and held training on a Jekyll markdown authoring environment to provide authors with conditional-coding for topic reuse, using three output styles across six products, some in continuous delivery.</accomplishment>
+                        <accomplishment jobrole="dev ia">Devised a multi-sourced approach for authors of Jekyll markdown and DITA to publish concurrently.</accomplishment>
+                    </accomplishments>
+                </position>
+                <position>
+                    <organization>IBM</organization>
+                    <location>Seattle, WA</location>
+                    <datefrom>2014-11</datefrom>
+                    <dateto>2017-08</dateto>
+                    <jobtitle>Application Development Lead and Content Support Specialist</jobtitle>
+                    <accomplishments>
+                        <accomplishment jobrole="dev wrt">Led a small team who continued to design, develop, document, and maintain the CakePHP build, test, translation, and delivery system that automated the publication production workflow across sites.</accomplishment>
+                        <accomplishment jobrole="dev">Integrated SOAP communication with the corporate translation planning application and REST communication between our application's server nodes.</accomplishment>
+                        <accomplishment jobrole="dev">Mentored a frontend development intern as she added translation planning forms to our application.</accomplishment>
+                        <accomplishment jobrole="dev wrt ia">Created a common code base, scripts, workflow, and documentation to automate the installation of the application and backend servers on our separate application server nodes.</accomplishment>
+                        <accomplishment jobrole="dev ia">For a library of content to be maintained by Ruby developers, migrated the content to DITA-OT markdown and wrote a Ruby script to compile the source and trigger the automated building and publishing.</accomplishment>
+                    </accomplishments>
+                </position>
+                <position>
+                    <organization>IBM</organization>
+                    <location>Seattle, WA</location>
+                    <datefrom>2014-10</datefrom>
+                    <dateto>2006-08</dateto>
+                    <jobtitle>Technical Writer and Application Developer</jobtitle>
+                    <accomplishments>
+                        <accomplishment jobrole="wrt dev">Collaborated with support and engineering to improve the installation and administration documentation, while also designing and developing the product documentation's first automated build application.</accomplishment>
+                        <accomplishment jobrole="ia">Applied a DITA metadata architecture to installation and administration topics to produce custom PDF guides based on user selections of role, desired OS, and configuration options.</accomplishment>
+                        <accomplishment jobrole="ia">Architected the DITA reuse strategy for topics to be shared among the IBM Classic group of products.</accomplishment>
+                        <accomplishment jobrole="ia">Partnered with other information architects to design and implement a DITA architecture componentized by feature capability and organized hierachically by user task.</accomplishment>
+                        <accomplishment jobrole="wrt">Co-authored our lab's monthly newsletter about our product and documentation competitors.</accomplishment>
+                        <accomplishment jobrole="dev">Recognized for creating the source control release strategy and web application for both the English and translated content build, review, test, and publish workflow.</accomplishment>
+                        <accomplishment jobrole="dev">Developed the translation workflow components of an inspired team member's vision for a more user customizable web application for the documentation production workflow. He architected it with CakePHP, MySQL, and Jenkins, and he drove adoption across at least three sites.</accomplishment>
+                    </accomplishments>
+                </position>
+                <position>
+                    <organization>IBM</organization>
+                    <location>San Jose, CA</location>
+                    <datefrom>1994-08</datefrom>
+                    <dateto>2006-07</dateto>
+                    <jobtitle>Technical Writer</jobtitle>
+                    <accomplishments>
+                        <accomplishment jobrole="dev">An active member of the IBM Software Group installation workgroup, I aided the design of the product installation wizard and drove the out-of-the-box download and readme experience, to include conducting many hours of low-fi user testing.</accomplishment>
+                        <accomplishment jobrole="wrt">Drew upon user and competitor feedback to improve contextual help, implement tooltips, and using ViewletBuilder create a product Flash tutorial on migrating from Oracle to DB2.</accomplishment>
+                        <accomplishment jobrole="dev">As a site expert in Eclipse Help and user-assistance configuration and implementation, I was lead architect of the Eclipse UA DITA specialization and created two wizards to aid writers with conversions to Eclipse Help.</accomplishment>
+                        <accomplishment jobrole="dev">As site DITA advocate, I migrated the product documentation to DITA and assisted two other product doc teams in their migration from both IBMIDDOC SGML and IBM BookMaster.</accomplishment>
+                        <accomplishment jobrole="wrt">Authored a two-page full-color brochure for a product marketing campaign at a third of the cost by using an in-house SGML Doctype.</accomplishment>
+                        <accomplishment jobrole="wrt dev">Used Perl to create the DITA User Guide and Message Reference from the product Java message catalog.</accomplishment>
+                        <accomplishment jobrole="wrt">Through two releases, maintained the Net.Data User Guide and Reference, authored in IBMIDDOC SGML.</accomplishment>
+                        <accomplishment jobrole="dev">Increased skills in DB2 SQL, XML, and PHP-style web application authoring.</accomplishment>
+                        <accomplishment jobrole="dev ia">Proposed and created a data source configuration wizard, written in C and TaskGuide SGML, using APIs for Windows, DB2, Oracle, Sybase, and SQL Server, over SNA APPC or TCP/IP connections, with some additional WinHelp reference content.</accomplishment>
+                        <accomplishment jobrole="dev">Held training sessions on TCP/IP and introductory Linux usage.</accomplishment>
+                        <accomplishment jobrole="wrt dev ia">Improved the OS/2 online help design independent of writing the content by using Perl to separate the two.</accomplishment>
+                        <accomplishment jobrole="dev">Administered an AIX shared-development server on which I also developed and hosted a perl CGI web app used for CMVC defect tracking for the team.</accomplishment>
+                        <accomplishment jobrole="wrt dev">Learned object-oriented modeling, AIX, and Perl, while maintaining the installation guide in BookMaster.</accomplishment>
+                    </accomplishments>
+                </position>
+            </positions>
+        </experience>
+        <education>
+            <program>
+                <school>University of Washington</school>
+                <degree>Bachelor of Science (BS)</degree>
+                <field>Technical Communication, Department of Human-Centered Design and Engineering</field>
+                <minor>Computer Science specialization</minor>
+                <datefrom>1989-09</datefrom>
+                <dateto>1994-12</dateto>
+            </program>
+        </education>
+        <awards>
+            <award>
+                <title>Outstanding Technical Achievement</title>
+                <issuedby>IBM</issuedby>
+                <dateissued>2021-10</dateissued>
+                <achievement>Team award for implementing the AI-driven video transcription service provided in the Cloud Pak for Data as a Service documentation application, as described in the paper published in the CASCON Proceedings of the ACM, Nov, 2021.</achievement>
+            </award>
+            <award>
+                <title>Outstanding Technical Achievement</title>
+                <issuedby>IBM</issuedby>
+                <dateissued>1994-09</dateissued>
+                <achievement>For replacing many complex topics with a data source configuration wizard, which was very well received by customers, because it gracefully overcame points of potential failure in various types of network communications and federated database connectivity.</achievement>
+            </award>
+        </awards>
     </resumebody>
 </resume>
