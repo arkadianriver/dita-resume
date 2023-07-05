@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <variables>
 
-  <!-- @TODO: determine total page count -->
+  <!-- Custom for 'Current of Total' format -->
   <variable id="Body odd footer"><param ref-name="pagenum"/> of <param ref-name="pagenumlast"/></variable>
   <variable id="Body even footer"><param ref-name="pagenum"/> of <param ref-name="pagenumlast"/></variable>
 
