@@ -17,9 +17,9 @@ top of each relevant section, depending on the job role you attribute to the ent
 
 Sample output:
 
-- [Developer role](https://arkadianriver.github.io/dita-resume/resume_dev.pdf)
-- [Architecture role](https://arkadianriver.github.io/dita-resume/resume_ia.pdf)
-- [Writing role](https://arkadianriver.github.io/dita-resume/resume_wrt.pdf)
+- [Developer role](https://arkadianriver.github.io/dita-resume/resume_Gary_Faircloth_dev.pdf)
+- [Architecture role](https://arkadianriver.github.io/dita-resume/resume_Gary_Faircloth_ia.pdf)
+- [Writing role](https://arkadianriver.github.io/dita-resume/resume_Gary_Faircloth_wrt.pdf)
 
 Because this is DITA, you can of course include or exclude varying content as normal,
 but use a property other than `jobrole` to do that.
