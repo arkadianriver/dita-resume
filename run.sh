@@ -121,9 +121,9 @@ outnojekyll ()
 		<article>
 			<h1>DITA-created role-based résumés</h1>
 			<div>
-				<div><div><a href="resume_dev.pdf">Résumé ordered for Content DevOps Development</a></div></div>
-				<div><div><a href="resume_ia.pdf">Résumé ordered for Information Architecture</a></div></div>
-				<div><div><a href="resume_wrt.pdf">Résumé ordered for Technical Writing</a></div></div>
+				<div><div><a href="resume_${fnamelname}_dev.pdf">Résumé ordered for Content DevOps Development</a></div></div>
+				<div><div><a href="resume_${fnamelname}_ia.pdf">Résumé ordered for Information Architecture</a></div></div>
+				<div><div><a href="resume_${fnamelname}_wrt.pdf">Résumé ordered for Technical Writing</a></div></div>
 			</div>
 		</article>
 	</main>
@@ -164,6 +164,11 @@ compileJava ()
 	popd
 }
 
+getname ()
+{
+	fnamelname=$(cat ./src/resume.dita | sed -n -e 's|<name>\(.*\)</name>|\1|p' | awk '{ print $1"_"$2; }')
+}
+
 case $1 in
 	-j)
 		compileJava
@@ -174,12 +179,14 @@ case $1 in
 		;;
 	-d)
 		shift
-		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_$1
+		getname
+		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_${fnamelname}_$1
 		dita -i src/resume.dita -f resume -t temp --clean.temp=no $roleflag $ofile
 		;;
 	-dd)
 		shift
-		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_$1
+		getname
+		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_${fnamelname}_$1
 		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log $roleflag $ofile
 		;;
 	-2)
@@ -196,10 +203,11 @@ case $1 in
 		$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita install
 		;;
 	-ghpages)
+		getname
 		roles=(dev ia wrt)
 		for ((i=0; i < 3; ++i)); do
 			$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/resume.dita -f resume \
-			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${roles[$i]}
+			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${fnamelname}_${roles[$i]}
 		done
 		outnojekyll
 		;;
