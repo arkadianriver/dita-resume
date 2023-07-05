@@ -89,8 +89,8 @@
                 <position>
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
-                    <datefrom>2014-10</datefrom>
-                    <dateto>2006-08</dateto>
+                    <datefrom>2006-08</datefrom>
+                    <dateto>2014-10</dateto>
                     <jobtitle>Technical Writer and Application Developer</jobtitle>
                     <accomplishments>
                         <accomplishment jobrole="wrt dev">Collaborated with support and engineering to improve the installation and administration documentation, while also designing and developing the product documentation's first automated build application.</accomplishment>
