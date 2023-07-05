@@ -58,27 +58,18 @@
                         <accomplishment jobrole="dev">Developed, documented, and held training on the Metalsmith and LiquidJS markdown authoring environment for Cloud Pak for Data content, to migrate from Jekyll for a new translation workflow.</accomplishment>
                         <accomplishment jobrole="dev">Achieved top search ranking for Cloud Pak for Data as a Service documentation by writing and deploying the NodeJS backend sitemap.xml generation utility.</accomplishment>
                         <accomplishment jobrole="dev">Developed the design layout, automated build process, and localization workflow for the service documentation landing pages for IBM Cloud Pak for Data, by using IBM Carbon CSS, DITA XSLT overrides, Hugo, Ruby, and IBM Globalization Pipeline CLI tools. Documented and held training on the process.</accomplishment>
-                    </accomplishments>
-                </position>
-                <position>
-                    <organization>IBM</organization>
-                    <location>Seattle, WA</location>
-                    <datefrom>2017-09</datefrom>
-                    <dateto>2019-12</dateto>
-                    <jobtitle>Content DevOps Developer</jobtitle>
-                    <accomplishments>
-                        <accomplishment jobrole="dev">Provided development support to the Cloud Pak for Data and business partner content design teams.</accomplishment>
-                        <accomplishment jobrole="dev wrt">Developed, documented, and held training on a Jekyll markdown authoring environment to provide authors with conditional-coding for topic reuse, using three output styles across six products, some in continuous delivery.</accomplishment>
-                        <accomplishment jobrole="dev ia">Devised a multi-sourced approach for authors of Jekyll markdown and DITA to publish concurrently.</accomplishment>
+                        <accomplishment jobrole="dev ia">Wrote a Python application to crawl, download, and divide a 5000 page documentation web site, including referenced graphics, to build into manageable PDF sizes.</accomplishment>
                     </accomplishments>
                 </position>
                 <position>
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
                     <datefrom>2014-11</datefrom>
-                    <dateto>2017-08</dateto>
-                    <jobtitle>Application Development Lead and Content Support Specialist</jobtitle>
+                    <dateto>2019-12</dateto>
+                    <jobtitle>Application Development Lead and Content DevOps Developer</jobtitle>
                     <accomplishments>
+                        <accomplishment jobrole="dev wrt">Developed, documented, and held training on a Jekyll markdown authoring environment to provide authors with conditional-coding for topic reuse, using three output styles across six products, some in continuous delivery.</accomplishment>
+                        <accomplishment jobrole="dev ia">Devised a multi-sourced approach for authors of Jekyll markdown and DITA to publish concurrently.</accomplishment>
                         <accomplishment jobrole="dev wrt">Led a small team who continued to design, develop, document, and maintain the CakePHP build, test, translation, and delivery system that automated the publication production workflow across sites.</accomplishment>
                         <accomplishment jobrole="dev">Integrated SOAP communication with the corporate translation planning application and REST communication between our application's server nodes.</accomplishment>
                         <accomplishment jobrole="dev">Mentored a frontend development intern as she added translation planning forms to our application.</accomplishment>
