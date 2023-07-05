@@ -2,15 +2,18 @@
 
 usage () {
 	cat <<EOU
-usage: $0 [-o | -d | -2 | -f]
+usage: $0 [ -j | -o | [ -d | -dd ] [ <jobrole> ] | -2 | -f | -p | -ghpages ]
 where:
--j Compile the Java library in the plugin
--o Copy the plugin to Oxygen's DITA-OT 3.x
--d DITA PDF build with the 'resume' transtype
--2 Apache FOP build of temp/stage2.fo
--f Apache FOP build of temp/topic.fo
--p Split the out/toc.pdf into separate documents
--ghpages Production run for distribution
+-j        Compile the Java library in the plugin
+-o        Copy the plugin to Oxygen's DITA-OT 3.x
+-d        DITA PDF build of resume
+-dd       DITA PDF build of resume, with debug output to run.log
+<jobrole> The role to order by
+          (In this original sample, it's dev, ia, or wrt)
+-2        Apache FOP build of temp/stage2.fo
+-f        Apache FOP build of temp/topic.fo
+-p        Split the out/toc.pdf into separate documents
+-ghpages  Production run for distribution
 EOU
 exit 1
 }
@@ -171,13 +174,13 @@ case $1 in
 		;;
 	-d)
 		shift
-		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1
-		dita -i src/resume.dita -f resume -t temp --clean.temp=no $roleflag
+		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_$1
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no $roleflag $ofile
 		;;
 	-dd)
 		shift
-		[[ $1 != '' ]] && roleflag=-Djobrole=$1
-		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log $roleflag
+		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_$1
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no --debug=yes -l run.log $roleflag $ofile
 		;;
 	-2)
 		runfop stage2.fo

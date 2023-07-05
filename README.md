@@ -38,6 +38,16 @@ than pick and choose.
 No need for an XSL-FO processor;
 the default Apache FOP that is distributed with DITA-OT is used here.
 
+Finally, install the com.arkadianriver.resume DITA plugin by editing the
+`config/configuration.properties` file in your DITA installation, appending
+a semi-colon and the full path to the `./plugins` folder in this repository to the
+`plugindirs` property. For example:
+
+```properties
+plugindirs = plugins;demo;C:\\GitHub\\dita-resume\\plugins
+```
+
+Then, run the `dita install` command.
 
 ## Use
 
@@ -62,10 +72,11 @@ A couple of data input conventions:
   (TODO: change the country code to a selectable attribute off the phone element)
 
 When you build a résumé with the custom `resume` transform type,
-provide the job role you want prioritized.
+provide the job role you want prioritized to the `run` script or
+batch file for your operating system. For example:
 
-```bash
-./run.sh -d dev
+```batch
+run.bat -d dev
 ```
 
 Entries with that role will be listed first under the Summary Skills and
