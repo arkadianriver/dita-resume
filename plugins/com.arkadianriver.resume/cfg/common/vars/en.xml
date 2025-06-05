@@ -16,6 +16,9 @@
   <!-- Awards text -->
   <variable id="issued_by_x">Issued by <param ref-name="issuedby"/></variable>
 
+  <!-- Current position When no <dateto> exists -->
+  <variable id="present">present</variable>
+
   <!-- Month abbreviations -->
   <variable id="mon_01">Jan</variable>
   <variable id="mon_02">Feb</variable>

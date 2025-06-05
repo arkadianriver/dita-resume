@@ -20,6 +20,7 @@
       xsl:use-attribute-sets="topic">
       <xsl:attribute name="page-break-after">always</xsl:attribute>
       <xsl:apply-templates select="." mode="commonTopicProcessing" />
+      <fo:block id="last-page"/>
     </fo:block>
   </xsl:template>
 

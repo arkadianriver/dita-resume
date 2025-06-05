@@ -9,7 +9,7 @@ where:
 -d        DITA PDF build of resume
 -dd       DITA PDF build of resume, with debug output to run.log
 <jobrole> The role to order by
-          (In this original sample, it's dev, ia, or wrt)
+          (In this original sample, it's dev, ia, wrt, or gen)
 -2        Apache FOP build of temp/stage2.fo
 -f        Apache FOP build of temp/topic.fo
 -p        Split the out/toc.pdf into separate documents
@@ -20,7 +20,7 @@ exit 1
 
 
 [ -z $1 ] && usage
-[ -z $DITA_HOME ] && DITA_HOME=$HOME/.local/share/dita-ot-4.0.2
+[ -z $DITA_HOME ] && DITA_HOME=$HOME/.local/share/dita-ot-4.2.3
 plugname=com.arkadianriver.resume
 scriptdir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 oxyplugdir="$HOME/Apps/Oxygen XML Editor 25/frameworks/dita/DITA-OT3.x/plugins"
@@ -127,6 +127,7 @@ outnojekyll ()
 				<div><div><a href="resume_${fnamelname}_dev.pdf">Résumé ordered for Content DevOps Development</a></div></div>
 				<div><div><a href="resume_${fnamelname}_ia.pdf">Résumé ordered for Information Architecture</a></div></div>
 				<div><div><a href="resume_${fnamelname}_wrt.pdf">Résumé ordered for Technical Writing</a></div></div>
+				<div><div><a href="resume_${fnamelname}_gen.pdf">Résumé ordered for General Service Labor</a></div></div>
 			</div>
 		</article>
 	</main>
@@ -147,7 +148,7 @@ splitpdf ()
 		grep '^BookmarkPageNumber: ' | cut -f2 -d' ' | uniq)
 		end )
 
-	roles=(dev ia wrt)
+	roles=(dev ia wrt gen)
 
 	for ((i=0; i < ${#pagenumbers[@]} - 1; ++i)); do
 		a=${pagenumbers[i]} # start page number
@@ -183,8 +184,8 @@ case $1 in
 	-d)
 		shift
 		getname
-		[[ $1 != '' ]] && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_${fnamelname}_$1
-		dita -i src/resume.dita -f resume -t temp --clean.temp=no $roleflag $ofile
+		[[ $1 != '' ]] && props=--filter=src/filters-$1.ditaval && roleflag=-Dargs.jobrole=$1 && ofile=--outputFile.base=resume_${fnamelname}_$1
+		dita -i src/resume.dita -f resume -t temp --clean.temp=no $props $roleflag $ofile
 		;;
 	-dd)
 		shift
@@ -207,7 +208,7 @@ case $1 in
 		;;
 	-ghpages)
 		getname
-		roles=(dev ia wrt)
+		roles=(dev ia wrt gen)
 		for ((i=0; i < 3; ++i)); do
 			$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/resume.dita -f resume \
 			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${fnamelname}_${roles[$i]}

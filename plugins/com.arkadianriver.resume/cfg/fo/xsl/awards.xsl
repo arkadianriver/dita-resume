@@ -14,7 +14,6 @@
   <xsl:template match="*[contains(@class, ' resume/awards ')]">
     <xsl:apply-templates select="." mode="dita2xslfo:section-heading"/>
     <xsl:apply-templates select="*"/>
-    <fo:block id="last-page"/>
   </xsl:template>
 
   <xsl:template match="*[contains(@class, ' resume/award ')]">

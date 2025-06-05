@@ -60,8 +60,13 @@
 <!ELEMENT  header %header.content;>
 <!ATTLIST  header %header.attributes;>
 
+<!ENTITY % description.attributes
+  "%univ-atts;
+   outputclass CDATA #IMPLIED" >
+
 <!ENTITY % description.content "( #PCDATA | %basic.ph; )*" >
 <!ELEMENT description %description.content; >
+<!ATTLIST description %description.attributes;>
 
 
 <!-- ===============
@@ -104,10 +109,7 @@
     (%awards;)?)" >
 
 <!ENTITY % resumebody.attributes
-  "%id-atts;
-   %localization-atts;
-   base CDATA #IMPLIED
-   %base-attribute-extensions;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  resumebody %resumebody.content;>
@@ -127,8 +129,7 @@
     (%technologies;)?)" >
 
 <!ENTITY % summary.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  summary %summary.content;>
@@ -145,8 +146,7 @@
   "((%specialty;)*)" >
 
 <!ENTITY % specialties.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  specialties %specialties.content;>
@@ -163,8 +163,7 @@
   "((%technology;)*)" >
 
 <!ENTITY % technologies.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  technologies %technologies.content;>
@@ -179,12 +178,11 @@
 <!ENTITY % techcategorylist "techcategorylist" >
 
 <!ENTITY % technology.content
-  "((%techcategory;),
+  "((%techcategory;)?,
     (%techcategorylist;))" >
 
 <!ENTITY % technology.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  technology %technology.content; >
@@ -203,8 +201,7 @@
     (%number;))" >
 
 <!ENTITY % phone.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  phone %phone.content; >
@@ -220,8 +217,7 @@
   "((%positions;)*)" >
 
 <!ENTITY % experience.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  experience %experience.content;>
@@ -238,8 +234,7 @@
   "((%position;)*)" >
 
 <!ENTITY % positions.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  positions %positions.content;>
@@ -267,8 +262,8 @@
     (%accomplishments;)?)" >
 
 <!ENTITY % position.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
+   %props-attribute-extensions;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  position %position.content;>
@@ -285,8 +280,7 @@
   "((%accomplishment;)*)" >
 
 <!ENTITY % accomplishments.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  accomplishments %accomplishments.content;>
@@ -303,8 +297,7 @@
   "((%program;)*)" >
 
 <!ENTITY % education.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  education %education.content;>
@@ -328,8 +321,7 @@
     (%dateto;))" >
 
 <!ENTITY % program.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  program %program.content;>
@@ -346,8 +338,7 @@
   "((%award;)*)" >
 
 <!ENTITY % awards.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  awards %awards.content;>
@@ -368,8 +359,7 @@
     (%achievement;)?)" >
 
 <!ENTITY % award.attributes
-  "%id-atts;
-   %localization-atts;
+  "%univ-atts;
    outputclass CDATA #IMPLIED" >
 
 <!ELEMENT  award %award.content;>
@@ -403,28 +393,28 @@
 <!ENTITY % dateissued.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % achievement.content "( #PCDATA | %basic.ph; )*" >
 
-<!ENTITY % countrycode.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % number.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % name.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % email.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % linkedin.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % website.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % specialty.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % techcategory.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % techcategorylist.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % organization.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % location.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % jobtitle.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % datefrom.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % dateto.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % accomplishment.attributes "%id-atts; %localization-atts; outputclass CDATA #IMPLIED %jobrole-d-attribute;" >
-<!ENTITY % school.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % degree.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % field.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % minor.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % issuedby.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % dateissued.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
-<!ENTITY % achievement.attributes  "%id-atts; %localization-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % countrycode.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % number.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % name.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % email.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % linkedin.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % website.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % specialty.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % techcategory.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % techcategorylist.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % organization.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % location.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % jobtitle.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % datefrom.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % dateto.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % accomplishment.attributes "%univ-atts; outputclass CDATA #IMPLIED %jobrole-d-attribute;" >
+<!ENTITY % school.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % degree.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % field.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % minor.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % issuedby.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % dateissued.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % achievement.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
 
 <!ELEMENT name %name.content; >
 <!ELEMENT countrycode %countrycode.content; >

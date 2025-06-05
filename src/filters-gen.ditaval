@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <val>
-  <prop att="audience" val="wrt" action="include"/>
-  <prop att="audience" val="notgen" action="include"/>
+  <prop att="audience" val="gen" action="include"/>
   <prop att="audience" action="exclude"/>
   <prop att="otherprops" val="future" action="exclude"/>
   <prop att="deliveryTarget" val="pdf" action="include"/>

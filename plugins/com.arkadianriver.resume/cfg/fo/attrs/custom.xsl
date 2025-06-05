@@ -116,6 +116,12 @@
     <xsl:attribute name="space-after">0</xsl:attribute>
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
   </xsl:attribute-set>
+  <xsl:attribute-set name="subsection.titlesmall" use-attribute-sets="common.title">
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
+    <xsl:attribute name="space-before">6pt</xsl:attribute>
+    <xsl:attribute name="space-after">0</xsl:attribute>
+    <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+  </xsl:attribute-set>
 
   <!-- tech-list (resume-only (dl equiv)) -->
   <xsl:attribute-set name="tech.dl">
