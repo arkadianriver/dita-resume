@@ -13,7 +13,7 @@
 
   <xsl:template match="*[contains(@class, ' resume/awards ')]">
     <xsl:apply-templates select="." mode="dita2xslfo:section-heading"/>
-    <xsl:apply-templates select="*"/>
+    <xsl:apply-templates select="*[contains(@class, ' resume/award ')]"/>
   </xsl:template>
 
   <xsl:template match="*[contains(@class, ' resume/award ')]">

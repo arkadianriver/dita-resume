@@ -20,6 +20,11 @@
          "../../base/dtd/highlightDomain.ent"
 >%hi-d-dec;
 
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "../../base/dtd/deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
 <!ENTITY % svg-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 SVG Domain//EN"
          "svgDomain.ent"
@@ -67,6 +72,9 @@
 <!ENTITY % base-attribute-extensions
   "%jobrole-d-attribute;"
 >
+<!ENTITY % props-attribute-extensions
+  "%deliveryTargetAtt-d-attribute;"
+>
 
 <!-- ============================================================= -->
 <!--                    TOPIC NESTING OVERRIDE                     -->
@@ -82,6 +90,7 @@
 
 <!ENTITY included-domains
                           "&hi-d-att;
+                           &deliveryTargetAtt-d-att;
                            &svg-d-att;
                            &jobrole-d-att;
   "

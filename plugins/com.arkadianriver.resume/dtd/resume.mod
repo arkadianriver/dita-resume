@@ -98,12 +98,14 @@
      =============== -->
 
 <!ENTITY % summary     "summary"    >
+<!ENTITY % projects    "projects"    >
 <!ENTITY % experience  "experience" >
 <!ENTITY % education   "education"  >
 <!ENTITY % awards      "awards"     >
 
 <!ENTITY % resumebody.content
   "((%summary;),
+    (%projects;)?,
     (%experience;)?,
     (%education;)?,
     (%awards;)?)" >
@@ -206,6 +208,24 @@
 
 <!ELEMENT  phone %phone.content; >
 <!ATTLIST  phone %phone.attributes; >
+
+
+<!-- ===============
+      Projects
+     =============== -->
+
+<!ENTITY % project "project" >
+
+<!ENTITY % projects.content
+  "((%project;)*)" >
+
+<!ENTITY % projects.attributes
+  "%univ-atts;
+   outputclass CDATA #IMPLIED" >
+
+<!ELEMENT  projects %projects.content;>
+<!ATTLIST  projects %projects.attributes;>
+
 
 <!-- ===============
       Experience
@@ -379,6 +399,7 @@
 <!ENTITY % specialty.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % techcategory.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % techcategorylist.content "( #PCDATA | %basic.ph; )*" >
+<!ENTITY % project.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % organization.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % location.content "( #PCDATA | %basic.ph; )*" >
 <!ENTITY % jobtitle.content "( #PCDATA | %basic.ph; )*" >
@@ -402,6 +423,7 @@
 <!ENTITY % specialty.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
 <!ENTITY % techcategory.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
 <!ENTITY % techcategorylist.attributes "%univ-atts; outputclass CDATA #IMPLIED" >
+<!ENTITY % project.attributes "%univ-atts; outputclass CDATA #IMPLIED %jobrole-d-attribute;" >
 <!ENTITY % organization.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
 <!ENTITY % location.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
 <!ENTITY % jobtitle.attributes  "%univ-atts; outputclass CDATA #IMPLIED" >
@@ -425,6 +447,7 @@
 <!ELEMENT specialty %specialty.content; >
 <!ELEMENT techcategory %techcategory.content; >
 <!ELEMENT techcategorylist %techcategorylist.content; >
+<!ELEMENT project %project.content; >
 <!ELEMENT organization %organization.content; >
 <!ELEMENT location %location.content; >
 <!ELEMENT jobtitle %jobtitle.content; >
@@ -448,6 +471,7 @@
 <!ATTLIST specialty %specialty.attributes; >
 <!ATTLIST techcategory %techcategory.attributes; >
 <!ATTLIST techcategorylist %techcategorylist.attributes; >
+<!ATTLIST project %project.attributes; >
 <!ATTLIST organization %organization.attributes; >
 <!ATTLIST location %location.attributes; >
 <!ATTLIST jobtitle %jobtitle.attributes; >
@@ -486,6 +510,8 @@
 <!ATTLIST  technology        %global-atts;  class CDATA "- topic/dlentry  resume/technology " %jobrole-d-attribute;>
 <!ATTLIST  techcategory      %global-atts;  class CDATA "- topic/dt  resume/techcategory ">
 <!ATTLIST  techcategorylist  %global-atts;  class CDATA "- topic/dd  resume/techcategorylist ">
+<!ATTLIST  projects          %global-atts;  class CDATA "- topic/section  resume/projects " spectitle CDATA "st_projects">
+<!ATTLIST  project           %global-atts;  class CDATA "- topic/p  resume/project ">
 <!ATTLIST  experience        %global-atts;  class CDATA "- topic/section  resume/experience " spectitle CDATA "st_experience">
 <!ATTLIST  positions         %global-atts;  class CDATA "- topic/ul  resume/positions ">
 <!ATTLIST  position          %global-atts;  class CDATA "- topic/li  resume/position ">

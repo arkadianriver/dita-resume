@@ -7,6 +7,7 @@
 
   <!-- Resume section titles -->
   <variable id="st_summary">Summary</variable>
+  <variable id="st_projects">Projects</variable>
   <variable id="st_experience">Experience</variable>
   <variable id="st_specialties">Specialties</variable>
   <variable id="st_technologies">Technologies</variable>

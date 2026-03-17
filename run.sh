@@ -9,7 +9,7 @@ where:
 -d        DITA PDF build of resume
 -dd       DITA PDF build of resume, with debug output to run.log
 <jobrole> The role to order by
-          (In this original sample, it's dev, ia, wrt, or gen)
+          (In this original sample, it's dat, dev, ia, wrt, or gen)
 -2        Apache FOP build of temp/stage2.fo
 -f        Apache FOP build of temp/topic.fo
 -p        Split the out/toc.pdf into separate documents
@@ -124,6 +124,7 @@ outnojekyll ()
 		<article>
 			<h1>DITA-created role-based résumés</h1>
 			<div>
+				<div><div><a href="resume_${fnamelname}_dat.pdf">Résumé filtered for Data Engineering</a></div></div>
 				<div><div><a href="resume_${fnamelname}_dev.pdf">Résumé ordered for Content DevOps Development</a></div></div>
 				<div><div><a href="resume_${fnamelname}_ia.pdf">Résumé ordered for Information Architecture</a></div></div>
 				<div><div><a href="resume_${fnamelname}_wrt.pdf">Résumé ordered for Technical Writing</a></div></div>
@@ -148,7 +149,7 @@ splitpdf ()
 		grep '^BookmarkPageNumber: ' | cut -f2 -d' ' | uniq)
 		end )
 
-	roles=(dev ia wrt gen)
+	roles=(dat dev ia wrt gen)
 
 	for ((i=0; i < ${#pagenumbers[@]} - 1; ++i)); do
 		a=${pagenumbers[i]} # start page number
@@ -208,7 +209,7 @@ case $1 in
 		;;
 	-ghpages)
 		getname
-		roles=(dev ia wrt gen)
+		roles=(dat dev ia wrt gen)
 		for ((i=0; i < 3; ++i)); do
 			$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/resume.dita -f resume \
 			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${fnamelname}_${roles[$i]}

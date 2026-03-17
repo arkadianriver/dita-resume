@@ -4,6 +4,7 @@
     <name>Gary Faircloth</name>
     <header>
         <description audience="gen">Seeking general part-time work</description>
+        <description jobrole="dat" audience="notgen dat">Data System Development and Engineering</description>
         <description jobrole="dev" audience="notgen">Content Software Development, DevOps, and Technical Writing</description>
         <description jobrole="ia"  audience="notgen">Information Architecture, Technical Writing, and Content DevOps Software Development</description>
         <description jobrole="wrt" audience="notgen">Technical Writing and Content Software Development</description>
@@ -16,6 +17,11 @@
     </header>
     <resumebody>
         <summary>
+            <p audience="dat">30-year Content Writer and Software Developer transitioning to <b>Data Engineering</b>,
+                even as a junior developer as I haven't had much <i>developer</i> mentorship in my career.
+                I look forward to being part of a dynamic team.
+                Relevant experience with Python, SQL, and DevOps pipelines, with troubleshooting and stakeholder relationship
+                skills, providing support and development of solutions that both use the latest appropriate tech and stay reliable over time.</p>
             <p audience="gen">I enjoyed a long career in the software industry developing applications and providing technical documentation.
                 The most fulfilling part of the work was building relationships and helping people succeed.
                 Now, in part-time retirement, I want to continue helping people however I can.</p>
@@ -24,30 +30,37 @@
                 process, many look to me for coaching and training on new technologies.
                 I inspire a fun and energetic atmosphere in which to create.</p>
             <specialties>
-                <specialty jobrole="dev">Software development for documentation production and quality assurance</specialty>
-                <specialty jobrole="wrt">Technical writing of user and development documentation</specialty>
+                <specialty jobrole="dev" audience="notgen gen dat">Software development for internal production and quality assurance</specialty>
+                <specialty jobrole="dat" audience="dat">Agile team coordination of small software development and support teams</specialty>
+                <specialty jobrole="dat" audience="dat">Continuous process improvement through regular communication with stakeholders</specialty>
+                <specialty jobrole="wrt" audience="notgen gen">Technical writing of user and development documentation</specialty>
                 <specialty audience="gen">Office administration</specialty>
                 <specialty audience="gen">Electronic assembly</specialty>
                 <specialty audience="gen">Food service and delivery</specialty>
-                <specialty jobrole="ia" audience="notgen">Support and DevOps for documentation authoring and production tools</specialty>
+                <specialty jobrole="ia" audience="notgen dat">Support and DevOps for documentation authoring and production tools</specialty>
                 <specialty jobrole="wrt" audience="notgen">UI design methodologies</specialty>
-                <specialty jobrole="ia" audience="notgen">Internal professional vitality training</specialty>
-                <specialty jobrole="ia" audience="notgen">Translation coordination</specialty>
+                <specialty jobrole="ia" audience="notgen dat">Internal professional vitality training</specialty>
+                <specialty jobrole="ia" audience="notgen dat">Translation coordination</specialty>
             </specialties>
             <technologies>
                 <technology audience="gen" jobrole="gen">
                     <techcategorylist>A myriad of software development and technical writing tools, GitHub, Slack,
                         Microsoft Office (including Project), Soldering, Flow-soldering</techcategorylist>
                 </technology>
-                <technology audience="notgen" jobrole="ia dev">
+                <technology audience="notgen" jobrole="ia dev dat">
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
                     <techcategorylist>DITA-OT, Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
                         TravisCI, GitHub workflows, Docker, Azure DevOps</techcategorylist>
                 </technology>
-                <technology audience="notgen" jobrole="dev">
+                <technology audience="dat" jobrole="dat">
+                    <techcategory>DevOps</techcategory>
+                    <techcategorylist>TravisCI, GitHub workflows, Docker, Azure DevOps, Rational Team Concert</techcategorylist>
+                </technology>
+                <technology audience="notgen dat" jobrole="dev">
                     <techcategory>Software development</techcategory>
-                    <techcategorylist>React, JavaScript, Python, Ruby, SQL, PHP, CakePHP MVC, HTML, CSS, XSLT,
-                        XSL-FO, Perl, Git, bash, PowerShell</techcategorylist>
+                    <techcategorylist>
+                        Python, SQL, XSLT, bash, PowerShell, PHP, HTML, CSS,
+                        Ruby, Perl, Git, XSL-FO, React, JavaScript</techcategorylist>
                 </technology>
                 <technology audience="notgen" jobrole="wrt">
                     <techcategory>Technical writing and training</techcategory>
@@ -56,6 +69,18 @@
                 </technology>
             </technologies>
         </summary>
+        <projects audience="dat">
+            <project><b>hqTodo</b> -
+                a React app for personal productivity, containing
+                a Gantt chart of active tasks,
+                a line graph of completed tasks, and
+                individual project summary pages</project>
+            <project><b>SQL Data Warehouse</b> -
+                a minimal ETL project from 6 CSVs to a 3-view star schema in Postgresql
+            </project>
+            <project><b>mymoney</b> -
+                an expense tracker written in Python, using pandas and plotly visualizations</project>
+        </projects>
         <experience>
             <positions>
                 <position>
@@ -66,30 +91,30 @@
                     <jobtitle>Content DevOps, DITA-OT, and XSLT Developer</jobtitle>
                     <accomplishments>
                         <accomplishment audience="gen">Part of a small team that developed and maintained certification documentation for the California ARB and the EPA.</accomplishment>
-                        <accomplishment audience="notgen" jobrole="dev">Toward improving team code accuracy, enacted PR-review feature development, tested to acceptance criteria, and practiced agile sprint project management.</accomplishment>
-                        <accomplishment audience="notgen" jobrole="dev">Enhanced XSLT 3.0 to XSL-FO PDF transforms to support formatting needs, such as out-of-range cell highlighting and conditional table row breaks.</accomplishment>
+                        <accomplishment audience="notgen dat" jobrole="dev">Enhanced XSLT 3.0 to XSL-FO PDF transforms to more easily identify test data, such as out-of-range cell highlighting and conditional table row breaks.</accomplishment>
+                        <accomplishment audience="notgen dat" jobrole="dev">Toward improving team code accuracy, enacted PR-review feature development, tested to acceptance criteria, and practiced agile sprint project management.</accomplishment>
+                        <accomplishment audience="notgen dat" jobrole="dev">Set up Azure DevOps pipelines for XSLT, DITA-OT, and schematron builds, with log scanning to notify users of warnings.</accomplishment>
                         <accomplishment audience="notgen" jobrole="dev">Refactored the content mono-repo into logical parts for more manageable development, particularly to keep up with the latest versions of DITA-OT.</accomplishment>
-                        <accomplishment audience="notgen" jobrole="dev">Set up Azure DevOps pipelines for XSLT, DITA-OT, and schematron builds, with log scanning to notify users of warnings.</accomplishment>
                         <accomplishment audience="notgen" otherprops="future" jobrole="dev">Developed a custom Oxygen framework, to maintain ease of authoring of the split repository.</accomplishment>
                     </accomplishments>
                 </position>
-                <position deliveryTarget="pdf" audience="notgen">
+                <position deliveryTarget="pdf" audience="dat notgen">
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
                     <datefrom>2014-11</datefrom>
                     <dateto>2023-05</dateto>
                     <jobtitle>Content DevOps, Support, and Web Developer</jobtitle>
                     <accomplishments>
-                        <accomplishment id="ibm01" jobrole="dev">Achieved top search ranking for Cloud Pak for Data as a Service documentation by writing and deploying the NodeJS backend sitemap.xml generation utility.</accomplishment>
                         <accomplishment id="ibm02" jobrole="dev">Developed the design layout, automated build process, and localization workflow for the service documentation landing pages for IBM Cloud Pak for Data, by using IBM Carbon CSS, DITA XSLT overrides, Hugo, Ruby, and IBM Globalization Pipeline CLI tools. Documented and held training on the process.</accomplishment>
                         <accomplishment id="ibm03" jobrole="dev ia">Wrote a Python application to crawl, download, and divide a 5000 page documentation web site, including referenced graphics, to build into manageable PDF sizes.</accomplishment>
+                        <accomplishment id="ibm01" jobrole="dev" audience="notgen">Achieved top search ranking for Cloud Pak for Data as a Service documentation by writing and deploying the NodeJS backend sitemap.xml generation utility.</accomplishment>
                         <accomplishment id="ibm04" jobrole="dev wrt">Developed, documented, and held training on a Jekyll markdown authoring environment to provide authors with conditional-coding for topic reuse, using three output styles across six products, some in continuous delivery.</accomplishment>
                         <accomplishment id="ibm05" jobrole="dev ia">Devised a multi-sourced approach for authors of Jekyll markdown and DITA to publish concurrently.</accomplishment>
                         <accomplishment id="ibm06" jobrole="dev wrt">Led a small team who continued to design, develop, document, and maintain the CakePHP build, test, translation, and delivery system that automated the publication production workflow across sites.</accomplishment>
                         <accomplishment id="ibm07" jobrole="dev ia">For a library of content to be maintained by Ruby developers, migrated the content to DITA-OT markdown and wrote a Ruby script to compile the source and trigger the automated building and publishing.</accomplishment>
                     </accomplishments>
                 </position>
-                <position audience="notgen" deliveryTarget="html">
+                <position audience="dat notgen" deliveryTarget="html">
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
                     <datefrom>2020-01</datefrom>
@@ -103,7 +128,7 @@
                         <accomplishment conref="#ibm03" jobrole="dev ia"/>
                     </accomplishments>
                 </position>
-                <position deliveryTarget="html" audience="notgen">
+                <position deliveryTarget="html" audience="dat notgen">
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
                     <datefrom>2014-11</datefrom>
@@ -119,7 +144,7 @@
                         <accomplishment conref="#ibm07" jobrole="dev ia"/>
                     </accomplishments>
                 </position>
-                <position audience="notgen">
+                <position audience="dat notgen">
                     <organization>IBM</organization>
                     <location>Seattle, WA</location>
                     <datefrom>2006-08</datefrom>
@@ -135,7 +160,7 @@
                         <accomplishment jobrole="dev">Developed the translation workflow components of an inspired team member's vision for a more user customizable web application for the documentation production workflow. He architected it with CakePHP, MySQL, and Jenkins, and he drove adoption across at least three sites.</accomplishment>
                     </accomplishments>
                 </position>
-                <position audience="notgen">
+                <position audience="dat notgen">
                     <organization>IBM</organization>
                     <location>San Jose, CA</location>
                     <datefrom>1994-08</datefrom>
@@ -269,7 +294,7 @@
                 <dateto>1994-12</dateto>
             </program>
         </education>
-        <awards audience="notgen">
+        <awards audience="dat notgen">
             <award>
                 <title>Outstanding Technical Achievement</title>
                 <issuedby>IBM</issuedby>
