@@ -18,10 +18,10 @@
     <resumebody>
         <summary>
             <p audience="dat">30-year Content Writer and Software Developer transitioning to <b>Data Engineering</b>,
-                even as a junior developer as I haven't had much <i>developer</i> mentorship in my career.
+                junior developer.
                 I look forward to being part of a dynamic team.
-                Relevant experience with Python, SQL, and DevOps pipelines, with troubleshooting and stakeholder relationship
-                skills, providing support and development of solutions that both use the latest appropriate tech and stay reliable over time.</p>
+                Relevant professional and personal experience with Python, SQL, and DevOps pipelines, with troubleshooting and stakeholder relationship
+                skills and providing support and development of solutions that both use the latest appropriate tech and stay reliable over time.</p>
             <p audience="gen">I enjoyed a long career in the software industry developing applications and providing technical documentation.
                 The most fulfilling part of the work was building relationships and helping people succeed.
                 Now, in part-time retirement, I want to continue helping people however I can.</p>
@@ -54,7 +54,7 @@
                 </technology>
                 <technology audience="dat" jobrole="dat">
                     <techcategory>DevOps</techcategory>
-                    <techcategorylist>TravisCI, GitHub workflows, Docker, Azure DevOps, Rational Team Concert</techcategorylist>
+                    <techcategorylist>Azure DevOps, GitHub workflows, TravisCI, Rational Team Concert</techcategorylist>
                 </technology>
                 <technology audience="notgen dat" jobrole="dev">
                     <techcategory>Software development</techcategory>
@@ -70,16 +70,16 @@
             </technologies>
         </summary>
         <projects audience="dat">
-            <project><b>hqTodo</b> -
-                a React app for personal productivity, containing
-                a Gantt chart of active tasks,
-                a line graph of completed tasks, and
-                individual project summary pages</project>
             <project><b>SQL Data Warehouse</b> -
                 a minimal ETL project from 6 CSVs to a 3-view star schema in Postgresql
             </project>
             <project><b>mymoney</b> -
                 an expense tracker written in Python, using pandas and plotly visualizations</project>
+            <project><b>hqTodo</b> -
+                a React app for personal productivity, containing
+                a Gantt chart of active tasks,
+                a line graph of completed tasks, and
+                individual project summary pages</project>
         </projects>
         <experience>
             <positions>
