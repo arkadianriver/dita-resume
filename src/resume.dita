@@ -45,7 +45,7 @@
             <technologies>
                 <technology audience="gen" jobrole="gen">
                     <techcategorylist>A myriad of software development and technical writing tools, GitHub, Slack,
-                        Microsoft Office (including Project), Soldering, Flow-soldering</techcategorylist>
+                        Microsoft Office (including Project), Sharepoint, Soldering, Flow-soldering</techcategorylist>
                 </technology>
                 <technology audience="notgen" jobrole="ia dev dat">
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
