@@ -47,14 +47,14 @@
                     <techcategorylist>A myriad of software development and technical writing tools, GitHub, Slack,
                         Microsoft Office (including Project), Sharepoint, Soldering, Flow-soldering</techcategorylist>
                 </technology>
-                <technology audience="notgen" jobrole="ia dev dat">
+                <technology audience="notgen" jobrole="ia dev">
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
                     <techcategorylist>DITA-OT, Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
                         TravisCI, GitHub workflows, Docker, Azure DevOps</techcategorylist>
                 </technology>
                 <technology audience="dat" jobrole="dat">
                     <techcategory>DevOps</techcategory>
-                    <techcategorylist>Azure DevOps, GitHub workflows, TravisCI, Rational Team Concert</techcategorylist>
+                    <techcategorylist>Docker, Azure DevOps, GitHub workflows, Jenkins, TravisCI, Rational Team Concert</techcategorylist>
                 </technology>
                 <technology audience="notgen dat" jobrole="dev">
                     <techcategory>Software development</techcategory>
@@ -157,7 +157,7 @@
                         <accomplishment jobrole="ia">Partnered with other information architects to design and implement a DITA architecture componentized by feature capability and organized hierarchically by user task.</accomplishment>
                         <accomplishment jobrole="wrt">Co-authored our lab's monthly newsletter about our product and documentation competitors.</accomplishment>
                         <accomplishment jobrole="dev">Recognized for creating the source control release strategy and web application for both the English and translated content build, review, test, and publish workflow.</accomplishment>
-                        <accomplishment jobrole="dev">Developed the translation workflow components of an inspired team member's vision for a more user customizable web application for the documentation production workflow. He architected it with CakePHP, MySQL, and Jenkins, and he drove adoption across at least three sites.</accomplishment>
+                        <accomplishment jobrole="dev">Developed the translation workflow components of an inspired team member's vision for a web application for the documentation production workflow in the Data and AI business unit. We built it with CakePHP, MySQL, and Jenkins, and its simplified user experience drove enthusiastic adoption across three sites.</accomplishment>
                     </accomplishments>
                 </position>
                 <position audience="dat notgen">
@@ -299,13 +299,13 @@
                 <title>Outstanding Technical Achievement</title>
                 <issuedby>IBM</issuedby>
                 <dateissued>2021-10</dateissued>
-                <achievement>Team award for implementing the AI-driven video transcription service provided in the Cloud Pak for Data as a Service documentation application, as described in the paper published in the CASCON Proceedings of the ACM, Nov, 2021.</achievement>
+                <achievement>a team award for implementing the AI-driven video transcription service provided in the Cloud Pak for Data as a Service documentation application, as described in the paper published in the CASCON Proceedings of the ACM, Nov, 2021.</achievement>
             </award>
             <award>
                 <title>Outstanding Technical Achievement</title>
                 <issuedby>IBM</issuedby>
                 <dateissued>1994-09</dateissued>
-                <achievement>For replacing many complex topics with a data source configuration wizard, which was very well received by customers, because it gracefully overcame points of potential failure in various types of network communications and federated database connectivity.</achievement>
+                <achievement>an individual award for replacing many complex topics with a data source configuration wizard, which was very well received by customers, because it gracefully overcame points of potential failure in various types of network communications and federated database connectivity.</achievement>
             </award>
         </awards>
     </resumebody>

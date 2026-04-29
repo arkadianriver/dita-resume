@@ -37,7 +37,7 @@
           <xsl:text> </xsl:text>
           <xsl:call-template name="getYear">
             <xsl:with-param name="yearmm" select="dateissued"/>
-          </xsl:call-template>,
+          </xsl:call-template>:
           <xsl:value-of select="achievement"/>
         </fo:inline>
       </fo:block>
