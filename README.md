@@ -10,10 +10,11 @@ When you're on the job hunt, you'll be uniquely qualified for various positions,
 but you'll want your resume to highlight the specific role you're applying for
 so that recruiters don't pass you by.
 
-The resumes created here all contain the same content
+Originally, the résumés created here all contained the same content
 (except the initial eye-catching description or title).
-When creating each one, however, you can indicate entries to filter to the
-top of each relevant section, depending on the job role you attribute to the entries.
+The `jobrole` attribute is used to indicate entries to filter to the
+top of each relevant section, depending on which role the currently built
+résumé corresponds to.
 
 Sample output:
 
@@ -21,12 +22,22 @@ Sample output:
 - [Architecture role](https://arkadianriver.github.io/dita-resume/resume_Gary_Faircloth_ia.pdf)
 - [Writing role](https://arkadianriver.github.io/dita-resume/resume_Gary_Faircloth_wrt.pdf)
 
-Because this is DITA, you can of course include or exclude varying content as normal,
-but use a property other than `jobrole` to do that.
-I chose not to filter because my three roles are somewhat related to the same
+I originally chose not to use filtering because my three roles were somewhat related to the same
 niche in the software industry, and I didn't want to exclude any accomplishments.
-Also, my content fills exactly two pages and it was easier to simply rearrange
+Also, my content fills exactly two pages, and it was easier to simply rearrange
 than pick and choose.
+
+After using this for a while and expanding my job role beyond technical communication,
+I ended up using other DITA attributes to include and exclude content
+as not all content was relevant to each of the new job roles.
+
+The `audience` attribute was the one I later used to filter content.
+The same job roles were used as values to filter, except for one additional
+role. This _general purpose_ role created a far-different résumé than the others,
+excluding all the accomplishments, it required two values `gen` and `notgen` used
+to identify content to keep in a general purpose résumé,
+and content to keep in the résumés for specific roles.
+
 
 ## Prerequisites
 
