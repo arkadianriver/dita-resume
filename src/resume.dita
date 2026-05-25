@@ -111,7 +111,7 @@
                         <accomplishment id="ibm04" jobrole="dev wrt">Developed, documented, and held training on a Jekyll markdown authoring environment to provide authors with conditional-coding for topic reuse, using three output styles across six products, some in continuous delivery.</accomplishment>
                         <accomplishment id="ibm05" jobrole="dev ia">Devised a multi-sourced approach for authors of Jekyll markdown and DITA to publish concurrently.</accomplishment>
                         <accomplishment id="ibm06" jobrole="dev wrt">Led a small team who continued to design, develop, document, and maintain the CakePHP build, test, translation, and delivery system that automated the publication production workflow across sites.</accomplishment>
-                        <accomplishment id="ibm07" jobrole="dev ia">For a library of content to be maintained by Ruby developers, migrated the content to DITA-OT markdown and wrote a Ruby script to compile the source and trigger the automated building and publishing.</accomplishment>
+                        <accomplishment id="ibm07" jobrole="dev ia" audience="notgen">For a library of content to be maintained by Ruby developers, migrated the content to DITA-OT markdown and wrote a Ruby script to compile the source and trigger the automated building and publishing.</accomplishment>
                     </accomplishments>
                 </position>
                 <position audience="dat notgen" deliveryTarget="html">
