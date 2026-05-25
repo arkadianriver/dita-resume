@@ -30,10 +30,10 @@
                 process, many look to me for coaching and training on new technologies.
                 I inspire a fun and energetic atmosphere in which to create.</p>
             <specialties>
-                <specialty jobrole="dev" audience="notgen gen dat">Software development for internal production and quality assurance</specialty>
+                <specialty jobrole="dev">Software development for internal production and quality assurance</specialty>
                 <specialty jobrole="dat" audience="dat">Agile team coordination of small software development and support teams</specialty>
                 <specialty jobrole="dat" audience="dat">Continuous process improvement through regular communication with stakeholders</specialty>
-                <specialty jobrole="wrt" audience="notgen gen">Technical writing of user and development documentation</specialty>
+                <specialty jobrole="wrt">Technical writing of user and development documentation</specialty>
                 <specialty audience="gen">Office administration</specialty>
                 <specialty audience="gen">Electronic assembly</specialty>
                 <specialty audience="gen">Food service and delivery</specialty>

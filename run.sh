@@ -210,7 +210,7 @@ case $1 in
 	-ghpages)
 		getname
 		roles=(dat dev ia wrt gen)
-		for ((i=0; i < 3; ++i)); do
+		for ((i=0; i < 5; ++i)); do
 			$GITHUB_WORKSPACE/Apps/dita-ot-$OT_VRM/bin/dita -i src/resume.dita -f resume \
 			-Dargs.jobrole=${roles[$i]} --outputFile.base=resume_${fnamelname}_${roles[$i]}
 		done
