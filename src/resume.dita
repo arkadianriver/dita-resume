@@ -45,12 +45,12 @@
             <technologies>
                 <technology audience="gen" jobrole="gen">
                     <techcategorylist>A myriad of software development and technical writing tools, GitHub, Slack,
-                        Microsoft Office (including Project), Sharepoint, Soldering, Flow-soldering</techcategorylist>
+                        Microsoft Office 365 (including Project), Sharepoint, Soldering, Flow-soldering</techcategorylist>
                 </technology>
                 <technology audience="notgen" jobrole="ia dev">
                     <techcategory>Content DevOps (Docs-as-Code CI/CD)</techcategory>
                     <techcategorylist>DITA-OT, Metalsmith, Jekyll, Hugo, Sphinx, Gatsby, Pandoc, Paged.js, Jenkins,
-                        TravisCI, GitHub workflows, Docker, Azure DevOps</techcategorylist>
+                        TravisCI, GitHub workflows, Docker, Azure DevOps, Microsoft Power Platform</techcategorylist>
                 </technology>
                 <technology audience="dat" jobrole="dat">
                     <techcategory>DevOps</techcategory>
@@ -65,7 +65,7 @@
                 <technology audience="notgen" jobrole="wrt">
                     <techcategory>Technical writing and training</techcategory>
                     <techcategorylist>DITA, Markdown, AsciiDoc, reStructuredText, OpenAPIv3 (Swagger), Oxygen
-                        XML Author, Draw.io, Kdenlive, GiMP, OBS Studio, Camtasia, Inkscape</techcategorylist>
+                        XML Author, Draw.io, Kdenlive, GiMP, OBS Studio, Camtasia, Inkscape, Microsoft Office 365</techcategorylist>
                 </technology>
             </technologies>
         </summary>
