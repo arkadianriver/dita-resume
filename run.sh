@@ -20,7 +20,7 @@ exit 1
 
 
 [ -z $1 ] && usage
-[ -z $DITA_HOME ] && DITA_HOME=$HOME/.local/share/dita-ot-4.2.3
+[ -z $DITA_HOME ] && DITA_HOME=$HOME/.local/share/dita-ot-4.4
 plugname=com.arkadianriver.resume
 scriptdir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 oxyplugdir="$HOME/Apps/Oxygen XML Editor 25/frameworks/dita/DITA-OT3.x/plugins"
